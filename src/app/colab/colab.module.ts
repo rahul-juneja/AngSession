@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { DibyaComponent } from './dibya/dibya.component';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    DibyaComponent
+  ],
   imports: [
     CommonModule
   ]
