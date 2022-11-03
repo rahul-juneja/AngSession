@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RahulComponent } from './rahul/rahul.component';
 import { ChikuComponent } from './chiku/chiku.component';
 import { DibyaComponent } from './dibya/dibya.component';
+import { BedrajComponent } from './bedraj/bedraj.component';
 
 
 
@@ -10,7 +11,8 @@ import { DibyaComponent } from './dibya/dibya.component';
   declarations: [
     RahulComponent,
     ChikuComponent,
-    DibyaComponent
+    DibyaComponent,
+    BedrajComponent
   ],
   imports: [
     CommonModule
