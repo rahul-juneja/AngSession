@@ -1,20 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-<<<<<<< HEAD
 import { RahulComponent } from './rahul/rahul.component';
-=======
+import { SangeetaComponent } from './sangeeta/sangeeta.component';
 import { DibyaComponent } from './dibya/dibya.component';
->>>>>>> c813bf8ad4a64e3f214942c184ddd260d91bd75f
 
 
 
 @NgModule({
   declarations: [
-<<<<<<< HEAD
-    RahulComponent
-=======
+    RahulComponent,
+  SangeetaComponent,
     DibyaComponent
->>>>>>> c813bf8ad4a64e3f214942c184ddd260d91bd75f
   ],
   imports: [
     CommonModule
