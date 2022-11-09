@@ -6,14 +6,17 @@ import { MenComponent } from './product/men/men.component';
 import { WomenComponent } from './product/women/women.component';
 import { HeaderComponent } from './webpage/header/header.component';
 import { MainComponent } from './main/main.component';
+import { KidboysComponent } from './product/kidboys/kidboys.component';
+import { KidgirlComponent } from './product/kidgirl/kidgirl.component';
 
 const routes: Routes = [
   {path:'', component:MainComponent},
   { path : 'men',component : MenComponent},
   {path:'women',component:WomenComponent},
   {path:'cart', component:CartComponent},
-  {path:"setting",component:SettingsComponent}
-
+  {path:"setting",component:SettingsComponent},
+  {path:"kidboys",component:KidboysComponent},
+  {path:"kidgirl",component:KidgirlComponent}
 ];
 
 @NgModule({
