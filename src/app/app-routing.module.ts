@@ -1,21 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CartpageComponent } from './cart/cartpage/cartpage.component';
-import { WomenComponent } from './cart/women/women.component';
-import { HeaderComponent } from './webpage/header/header.component';
-import { LoginComponent } from './webpage/login/login.component';
-import { RegisterComponent } from './webpage/register/register.component';
-import { SangeetaComponent } from './webpage/sangeeta/sangeeta.component';
+import { CartComponent } from './cart/cart/cart.component';
+import { SettingsComponent } from './profile-section/settings/settings.component';
+import { MenComponent } from './product/men/men.component';
+import { WomenComponent } from './product/women/women.component';
 
 const routes: Routes = [
   {path:'header', component:HeaderComponent},
-  {path:'sangeeta',component:SangeetaComponent},
-  {path:'login',component:LoginComponent},
-  {path:'register',component:RegisterComponent},
-  { path : 'cartpage',component : CartpageComponent
-
-  },
-  {path:'women',component:WomenComponent}
+  { path : 'men',component : MenComponent},
+  {path:'women',component:WomenComponent},
+  {path:'cart', component:CartComponent},
+  {path:"setting",component:SettingsComponent}
 ];
 
 @NgModule({
