@@ -5,14 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CartModule } from './cart/cart.module';
 import { ColabModule } from './colab/colab.module';
-import { MainComponent } from './main/main.component';
 import { ProductModule } from './product/product.module';
+import { HeaderComponent } from './webpage/header/header.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainComponent,
+    HeaderComponent
    
   ],
   imports: [
@@ -22,7 +22,7 @@ import { ProductModule } from './product/product.module';
     ProductModule,
     CartModule
   ],
-  providers: [],
+  providers: [HeaderComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
