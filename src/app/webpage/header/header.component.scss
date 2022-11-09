@@ -1,6 +1,4 @@
-.d-flex{
-    margin-right:450px;
-}
+
 #log{
     margin-right: 30px;
 }
@@ -100,4 +98,17 @@
    
     padding: 50px;
    
+}
+.search_icon{
+width: 45px;
+height: 35px;
+// position: absolute;
+}
+.search_inp:focus{
+    box-shadow: none;
+    border-bottom: 1px solid salmon;
+}
+
+.header_myn{
+    background: antiquewhite;
 }
