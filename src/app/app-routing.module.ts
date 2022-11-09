@@ -4,6 +4,7 @@ import { CartComponent } from './cart/cart/cart.component';
 import { SettingsComponent } from './profile-section/settings/settings.component';
 import { MenComponent } from './product/men/men.component';
 import { WomenComponent } from './product/women/women.component';
+import { HeaderComponent } from './webpage/header/header.component';
 
 const routes: Routes = [
   {path:'header', component:HeaderComponent},
