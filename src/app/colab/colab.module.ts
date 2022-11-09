@@ -7,6 +7,7 @@ import { ChikuComponent } from './chiku/chiku.component';
 import { BedrajComponent } from './bedraj/bedraj.component';
 import { SangramComponent } from './sangram/sangram.component';
 import { CartComponent } from '../cart/cart/cart.component';
+import { ShibaniComponent } from './shibani/shibani.component';
 
 
 
@@ -18,7 +19,8 @@ import { CartComponent } from '../cart/cart/cart.component';
     BedrajComponent,
     ChikuComponent,
     SangramComponent,
-    CartComponent
+    CartComponent,
+    ShibaniComponent
   ],
   imports: [
     CommonModule
