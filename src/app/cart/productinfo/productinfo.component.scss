@@ -1,0 +1,142 @@
+
+.text{
+    
+    font-size: 13px;
+    font-weight: 600;
+    padding-left: 30px;
+}
+
+
+.product_image{
+    padding-top: 25px;
+}
+.halfleft{
+    padding-left:25px ;
+    padding-right: 20px;
+}
+.img{
+    padding: 10px;
+}
+.list-group-item{
+    border: 1px solid;
+    margin: 10px;
+    width: 45%;
+}
+.discount-price{
+    color: orangered;
+}
+.tax{
+    color: green;
+    padding-left: 10px;
+}
+.size-chart{
+    color: orangered;
+}
+.sizes{
+    *{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+}
+.s-size:hover{
+    border-color: orangered;
+}
+.pricelist{
+    padding-top: 10px;
+    
+  }
+  .pricelist{
+    padding-left: 10px;
+  }
+  .product-size{
+    padding-left: 12px;
+    padding-top: 7px;
+  }
+  .allsizes{
+    padding-top: 30px;
+    padding-right: 340px;
+  }
+  .chart{
+    font-weight: 600;
+    font-size: 13px;
+    padding-right: 15px;
+  }
+  .order {
+    width: 40%;
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 2px;
+    border-width: 0px;
+    padding: 15px 16px;
+    background-color: rgb(255, 63, 108);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    border-radius: 5px;
+    height: 20%;
+    
+  }
+  .addtocart{
+    padding-top: 20px;
+    padding-left: 3px;
+    display: flex;
+    border-bottom: 1px solid rgb(233, 210, 210);
+    padding-bottom: 20px;
+  }
+  .bag{
+    font-weight: 600;
+    font-size: 15px;
+  }
+  .wishlist{
+    width: 20%;
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-weight: 600;
+    
+    padding: 15px 16px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    border: solid 1px;
+    // border-color: black;
+    height: 20%;
+    border-radius: 5px;
+    color: black;
+    position: relative;
+    left: 5px;
+  }
+  .lastpart{
+    
+    padding-top: 10px;
+    padding-left: 10px;
+    font-weight: 600;
+  }
+  .last{
+    display: flex;
+    
+  }
+  .four{
+    padding-top: 10px;
+    padding-left: 10px;
+    font-weight: 600;
+  }
+  .bottom{
+    font-size: 10px;
+  }
+  .off{
+    font-weight: 600;
+    color: red;
+    padding-left: 10px;
+  }
+  .priceall{
+    padding-bottom: 20px;
+    border-bottom: solid 1px rgb(233, 215, 215);
+    padding-left: 15px;
+  }
+.product_info{
+    padding-top: 10px;
+}
+.off2{
+    color: black;
+}
