@@ -11,5 +11,8 @@ isLogin = true
 
   ngOnInit(): void {
   }
+  show(){
+    this.isLogin=false;
+  }
 
 }
