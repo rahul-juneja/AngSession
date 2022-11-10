@@ -56,10 +56,7 @@ export class LoginComponent implements OnInit {
     }
   }
   signup(){
-<<<<<<< HEAD
     this.router.navigateByUrl("/signup")
-=======
-    this.router.navigateByUrl("/signup");
->>>>>>> dibya
+
   }
 }
