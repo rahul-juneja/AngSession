@@ -8,6 +8,8 @@ import { HeaderComponent } from './webpage/header/header.component';
 import { MainComponent } from './main/main.component';
 import { KidboysComponent } from './product/kidboys/kidboys.component';
 import { KidgirlComponent } from './product/kidgirl/kidgirl.component';
+import { LoginComponent } from './users/login/login.component';
+import { SignupComponent } from './users/signup/signup.component';
 
 const routes: Routes = [
   {path:'', component:MainComponent},
@@ -16,7 +18,9 @@ const routes: Routes = [
   {path:'cart', component:CartComponent},
   {path:"setting",component:SettingsComponent},
   {path:"kidboy",component:KidboysComponent},
-  {path:"kidgirl",component:KidgirlComponent}
+  {path:"kidgirl",component:KidgirlComponent},
+  {path:'login', component: LoginComponent},
+  {path:'signup', component: SignupComponent}
 ];
 
 @NgModule({

@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { CartModule } from './cart/cart.module';
 import { ColabModule } from './colab/colab.module';
 import { ProductModule } from './product/product.module';
+import { UsersModule } from './users/users.module';
 import { HeaderComponent } from './webpage/header/header.component';
 
 
@@ -19,6 +20,7 @@ import { HeaderComponent } from './webpage/header/header.component';
     BrowserModule,
     AppRoutingModule,
     ColabModule,
+    UsersModule,
     ProductModule,
     CartModule
   ],
