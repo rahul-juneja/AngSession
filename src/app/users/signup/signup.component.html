@@ -4,7 +4,7 @@
         <div class="content-holder">
             <h2>Hello Guest!</h2>
 
-            <button class="button-1" onclick="login()">Login</button>
+            <button class="button-1" (click)="login()">Login</button>
         </div>
     </div>
 
@@ -12,19 +12,19 @@
         <form class="login-form-container" [formGroup]="signupValue" (ngSubmit)="signupFormValue()">
             <h1>Sign Up Form</h1>
             <input type="text" placeholder="Username" class="input-field" formControlName="name">
-            <span *ngIf="f['name'].touched || submitted">
+            <span class="text-danger" *ngIf="f['name'].touched || submitted">
                 <label for="" *ngIf="f['name'].errors?.['required']">*required</label>
                 <label for="" *ngIf="f['name'].errors?.['pattern']">*Only alphabets</label>
             </span>
             <br><br>
             <input type="email" placeholder="Email" class="input-field" formControlName="email">
-            <span *ngIf="f['email'].touched || submitted">
+            <span class="text-danger" *ngIf="f['email'].touched || submitted">
                 <label for="" *ngIf="f['email'].errors?.['required']">*required</label>
                 <label for="" *ngIf="f['email'].errors?.['pattern']">*put Correct Format</label>
             </span>
             <br><br>
             <input type="password" placeholder="Password" class="input-field" formControlName="password">
-            <span *ngIf="f['password'].touched || submitted">
+            <span class="text-danger" *ngIf="f['password'].touched || submitted">
                 <label class="text-danger" for="" *ngIf="f['password'].errors?.['required']">*required</label>
                 <label class="text-danger" for="" *ngIf="f['password'].errors?.['pattern']">*put correct formats</label>
             </span>
