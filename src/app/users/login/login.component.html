@@ -1,0 +1,27 @@
+<div class="container">
+    <!--Data or Content-->
+    <div class="box-1">
+        <div class="content-holder">
+            <h2>Welcome Back!</h2>
+            
+            <button class="button-1" onclick="signup()">Sign up</button>
+        </div>
+    </div>
+    <div class="box-2">
+        <form class="login-form-container" [formGroup]="loginValue" (ngSubmit)="login()">
+            <h1>Login Form</h1>
+            <input type="email" placeholder="Email" class="input-field" formControlName="email">
+            <span *ngIf="f['email'].touched || submitted">
+                <label for="" *ngIf="f['email'].errors?.['required']">*required</label>
+                <label for="" *ngIf="f['email'].errors?.['pattern']">*put Correct Format</label>
+            </span>
+            <br><br>
+            <input type="password" placeholder="Password" class="input-field" formControlName="password">
+            <span *ngIf="f['password'].touched || submitted">
+                <span *ngIf="f['password'].errors?.['required']">*required</span>
+                <span *ngIf="f['password'].errors?.['pattern']">*only alphabets</span>
+            </span>
+            <br><br>
+            <button class="login-button" type="submit">Login</button>
+        </form>
+    </div>
