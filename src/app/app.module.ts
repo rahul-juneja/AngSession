@@ -22,7 +22,8 @@ import { HeaderComponent } from './webpage/header/header.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [HeaderComponent],
   bootstrap: [AppComponent]
