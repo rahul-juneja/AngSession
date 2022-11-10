@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light header_myn">
+<nav class="navbar navbar-expand-lg navbar-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
       <img src="assets/img/myn.png" height="50px" width="130px">
@@ -15,12 +15,15 @@
         <li class="nav-item">
           <a class="nav-link active" href="women">Women</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link active" href="kidboy">Kid Boy</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link active" href="kidgirl">Kid Girls</a>
-        </li>
+        <div class="dropdown">
+          <li class="nav-link active dropdown-toogle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Kids
+          </li>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="kidboy">Boys</a></li>
+            <li><a class="dropdown-item" href="kidgirl">Girls</a></li>
+          </ul>
+        </div>
       </ul>
       <form class="w-25 form-control d-flex">
         <img src="assets/img/search_icon.png" class="img search_icon" width="20px" alt="">
