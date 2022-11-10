@@ -1,67 +1,64 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    },
+  "users": [
     {
       "name": "dibya",
       "email": "dibya@gmail.com",
       "password": "Ab12345@",
-      "id": 10
+      "id": 1,
+      "img": "assets/img/shirt"
     },
     {
       "name": "ranjan",
       "email": "ranjan@gmail.com",
       "password": "Ranjan@1234",
-      "id": 11
+      "id": 1
     },
     {
       "name": "kabir",
       "email": "kabir@gmail.com",
       "password": "Kabir@8456",
-      "id": 12
+      "id": 2
     },
     {
       "name": "myntra",
       "email": "myntra@gmail.com",
       "password": "Myntra@1234",
       "gender": "male",
-      "id": 13
+      "id": 3
     },
     {
       "name": "sjhdgjl",
       "email": "dsfjkb@gmail.com",
       "password": "Dibya@3456",
       "gender": "male",
-      "id": 14
+      "id": 4
     },
     {
       "name": "hey",
       "email": "hey@gmail.com",
       "password": "Dhb@1234",
       "gender": "female",
-      "id": 15
+      "id": 5
     },
     {
       "name": "tyrth",
       "email": "tger@gmail.com",
       "password": "Dibya@386",
       "gender": "female",
-      "id": 16
+      "id": 6
     },
     {
       "name": "shiva",
       "email": "shiva@gmail.com",
       "password": "Sh@12345",
       "gender": "female",
-      "id": 17
+      "id": 7
     },
     {
       "name": "kuchbhi",
       "email": "kuchBhi@gmail.com",
       "password": "Kuch@gma",
+<<<<<<< HEAD
       "id": 18
     },
     {
@@ -75,16 +72,9 @@
       "email": "sangram@gmail.com",
       "password": "Sangram@1234",
       "id": 20
+=======
+      "id": 8
+>>>>>>> dibya
     }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

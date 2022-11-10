@@ -44,6 +44,10 @@ export class SignupComponent implements OnInit {
     }
   }
   login(){
+<<<<<<< HEAD
     this.router.navigateByUrl("/login")
+=======
+    this.router.navigateByUrl("/login");
+>>>>>>> dibya
   }
 }
