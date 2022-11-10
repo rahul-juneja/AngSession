@@ -10,6 +10,7 @@ isLogin = true
   constructor() { }
 
   ngOnInit(): void {
+    
   }
   show(){
     this.isLogin=false;
