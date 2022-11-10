@@ -6,16 +6,14 @@ import { map } from 'rxjs';
   providedIn: 'root'
 })
 export class ApiService {
+  url = "http://localhost:3000/users"
 
   constructor(private http:HttpClient) { }
   postMethod(data:any){
-    return this.http.post<any>("http://localhost:3000/posts",data).pipe(map((res:any)=>{
-      return res;
-    }))
+    return this.http.post<any>(this.url,data)
   }
+  
   getMothode(){
-    return this.http.get<any>("http://localhost:3000/posts").pipe(map((res:any)=>{
-      return res;
-    }))
+    return this.http.get<any>(this.url)
   }
 }
