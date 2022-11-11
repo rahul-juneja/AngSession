@@ -1,13 +1,19 @@
 #overview{
-    border: solid 5px rgb(166, 220, 245);
+    // border: solid 5px rgb(166, 220, 245);
     width:150px;
     height:600px;
 }
 #setting{
-    border: solid 5px rgb(166, 220, 245);
-    width:800px;
+    // border: solid 5px rgb(166, 220, 245);
+    // width:800px;
     margin-left: 40px;
 
+}
+.change_mobile{
+    border-color: tan;
+}
+.change_mobile:hover{
+    background-color: darksalmon;
 }
 .edit{
     padding-top: 40px;
@@ -24,9 +30,6 @@
 .radio{
     width:full;
 }
-
-
-
-
-
-
+.li{
+    display: inline;
+}

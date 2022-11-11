@@ -8,8 +8,12 @@ import { HeaderComponent } from './webpage/header/header.component';
 import { MainComponent } from './main/main.component';
 import { KidboysComponent } from './product/kidboys/kidboys.component';
 import { KidgirlComponent } from './product/kidgirl/kidgirl.component';
+
+import { ProductInfoComponent } from './cart/productinfo/productinfo.component';
+
 import { LoginComponent } from './users/login/login.component';
 import { SignupComponent } from './users/signup/signup.component';
+
 
 const routes: Routes = [
   {path:'', component:MainComponent},
@@ -19,6 +23,7 @@ const routes: Routes = [
   {path:"setting",component:SettingsComponent},
   {path:"kidboy",component:KidboysComponent},
   {path:"kidgirl",component:KidgirlComponent},
+  {path:'productinfo',component:ProductInfoComponent},
   {path:'login', component: LoginComponent},
   {path:'signup', component: SignupComponent}
 ];
