@@ -14,6 +14,7 @@ import { ProductInfoComponent } from './cart/productinfo/productinfo.component';
 import { LoginComponent } from './users/login/login.component';
 import { SignupComponent } from './users/signup/signup.component';
 import { PaymentComponent } from './cart/payment/payment.component';
+import { WishlistComponent } from './cart/wishlist/wishlist.component';
 
 
 const routes: Routes = [
@@ -28,6 +29,7 @@ const routes: Routes = [
   {path:'login', component: LoginComponent},
   {path:'signup', component: SignupComponent},
   {path:'payment', component: PaymentComponent},
+  {path:'wishlist', component: WishlistComponent},
 ];
 
 @NgModule({
