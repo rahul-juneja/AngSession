@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  isLogin = true;
+  isLogin:boolean = (localStorage.getItem('email')?true:false)
   isCart: boolean = false;
   constructor() { }
 
@@ -14,12 +14,17 @@ export class HeaderComponent implements OnInit {
     if (localStorage.getItem('isCart') == 'true') {
       this.isCart = true;
     }
-    if (localStorage.getItem('isCart') == 'false') this.isCart = false;
+    if (localStorage.getItem('isCart') == 'false'){
+      this.isCart = false;
+    }
   }
   show() {
-    this.isLogin = false; 
+    
   }
   cartShow() {
     localStorage.setItem('isCart', 'true');
+  }
+  logout(){
+    localStorage.clear()
   }
 }

@@ -41,9 +41,13 @@
                 </svg></i>
             </a>
           </li>
-          <ul class="dropdown-menu user-cont profile_opt">
+          <ul class="dropdown-menu user-cont profile_opt" [hidden]="isLogin">
             <li><a class="dropdown-item" href="login">login</a></li>
             <li><a class="dropdown-item" href="signup">signup</a></li>
+          </ul>
+          <ul class="dropdown-menu user-cont profile_opt" [hidden]="!isLogin">
+            <li><a class="dropdown-item" href="setting">Profile Settings</a></li>
+            <li><a class="dropdown-item" href="/" (click)="logout()">Logout</a></li>
           </ul>
         </div>
         

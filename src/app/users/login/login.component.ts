@@ -45,7 +45,7 @@ export class LoginComponent implements OnInit {
           localStorage.setItem('email', this.f['email'].value)
           localStorage.setItem('pass', this.f['password'].value)
           localStorage.setItem('id', this.user)
-          this.router.navigateByUrl("/signup")
+          this.router.navigateByUrl("/")
         }
         else {
           alert("Invalid User!")
