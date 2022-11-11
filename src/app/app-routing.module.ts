@@ -24,7 +24,7 @@ const routes: Routes = [
   {path:'women',component:WomenComponent},
   {path:'cart', component:CartComponent},
   {path:"setting",component:SettingsComponent},
-  {path:"kidboy",component:KidboysComponent},
+  {path:"kidboys",component:KidboysComponent},
   {path:"kidgirl",component:KidgirlComponent},
   {path:'productinfo',component:ProductInfoComponent},
   {path:'login', component: LoginComponent},
