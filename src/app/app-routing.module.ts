@@ -34,6 +34,7 @@ const routes: Routes = [
   {path:'address', component: AddressComponent},
   {path:'payment', component: PaymentComponent},
   {path:'wishlist', component: WishlistComponent},
+  {path:'**', redirectTo:'home', pathMatch:'full'}
 ];
 
 @NgModule({
