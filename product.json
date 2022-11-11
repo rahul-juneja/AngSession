@@ -49,9 +49,19 @@
             "discount_price": 3999,
             "discount_perc": 60,
             "id": 5
+        },
+        {
+            "name": "Marks & Spencer",
+            "description": "Cotton Formal Shirts",
+            "img": "https://5.imimg.com/data5/EL/PA/MY-6827188/dennis-morton-men-27s-ink-blue-party-half-sleeve-art-silk-shirt-500x500.png",
+            "img_2": "https://5.imimg.com/data5/GH/UA/MY-6827188/selection_902-1000x1000.png",
+            "price": 999,
+            "discount_price": 3999,
+            "discount_perc": 60,
+            "id": 6
         }
     ],
-    "women": [
+    "women": [ 
         {
             "name": "Mitera",
             "description": "Stripped Saree",
