@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-settings',
@@ -7,9 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SettingsComponent implements OnInit {
 
-  constructor() { }
+  updateform!:FormGroup
+  submitted=false;
 
-  ngOnInit(): void {
+  constructor(private formbuilder:FormBuilder) { }
+
+  ngOnInit() {
+    this.updateform=this.formbuilder.group({
+      number:['',Validators.required],
+    })
+  }
+
+  onSubmit(){
+    this.submitted=true;
+
+
+    if(this.updateform.invalid){
+      
+    }
+    alert("success")
   }
 
 }

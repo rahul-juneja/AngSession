@@ -108,3 +108,18 @@ height: 35px;
     box-shadow: none;
     border-bottom: 1px solid salmon;
 }
+.profile_opt{
+    left: -60px;
+}
+.user-cont{
+    display: none;
+}
+.dropdown:hover .user-cont{
+    display: block;
+}
+.kid-containt{
+    display: none;
+}
+.dropdown:hover .kid-containt{
+    display: block;
+}

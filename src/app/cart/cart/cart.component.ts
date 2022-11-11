@@ -10,7 +10,9 @@ export class CartComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  headerShow(){
+    localStorage.setItem('isCart', 'false')
+  }
   
 
 }

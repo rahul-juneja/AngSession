@@ -1,9 +1,12 @@
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CartModule } from './cart/cart.module';
+import { CartComponent } from './cart/cart/cart.component';
 import { ColabModule } from './colab/colab.module';
 import { ProductModule } from './product/product.module';
 import { UsersModule } from './users/users.module';
@@ -15,7 +18,8 @@ import { HeaderComponent } from './webpage/header/header.component';
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    CartComponent
    
   ],
   imports: [
@@ -24,7 +28,9 @@ import { HeaderComponent } from './webpage/header/header.component';
     ColabModule,
     UsersModule,
     ProductModule,
-    CartModule
+    CartModule,
+    ReactiveFormsModule,
+    RouterModule
   ],
   providers: [HeaderComponent],
   bootstrap: [AppComponent]
