@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light">
+<nav class="navbar navbar-expand-lg navbar-light" [hidden]="isCart">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
       <img src="assets/img/myn.png" height="50px" width="130px">
@@ -54,7 +54,7 @@
               <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
             </svg></i>
         </a>
-        <a href="cart" >
+        <a href="cart" (click)="cartShow()">
 
           <i id="cart" class="bi bi-bag"></i><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
             fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">

@@ -7,13 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 isLogin = true
-  constructor() { }
+isCart:boolean = false
+constructor() { }
 
-  ngOnInit(): void {
-    
+ngOnInit(): void {
+    if(localStorage.getItem('isCart')=="true"){
+      this.isCart = true
+    }
+    if(localStorage.getItem('isCart')=="false")
+    this.isCart = false
   }
   show(){
     this.isLogin=false;
+  }
+  cartShow(){
+    localStorage.setItem('isCart', 'true')
   }
 
 }
