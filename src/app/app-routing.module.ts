@@ -13,6 +13,7 @@ import { ProductInfoComponent } from './cart/productinfo/productinfo.component';
 
 import { LoginComponent } from './users/login/login.component';
 import { SignupComponent } from './users/signup/signup.component';
+import { PaymentComponent } from './cart/payment/payment.component';
 
 
 const routes: Routes = [
@@ -25,7 +26,8 @@ const routes: Routes = [
   {path:"kidgirl",component:KidgirlComponent},
   {path:'productinfo',component:ProductInfoComponent},
   {path:'login', component: LoginComponent},
-  {path:'signup', component: SignupComponent}
+  {path:'signup', component: SignupComponent},
+  {path:'payment', component: PaymentComponent},
 ];
 
 @NgModule({
