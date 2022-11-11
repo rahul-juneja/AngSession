@@ -19,7 +19,9 @@ import { WishlistComponent } from './cart/wishlist/wishlist.component';
 
 
 const routes: Routes = [
-  {path:'', component:MainComponent},
+  {path:'', redirectTo:'/home', pathMatch:'full'},
+  {path:'home', component:MainComponent},
+  {path:'header', component:HeaderComponent},
   {path:'men',component : MenComponent},
   {path:'women',component:WomenComponent},
   {path:'cart', component:CartComponent},
