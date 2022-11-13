@@ -119,6 +119,9 @@ height: 35px;
     height: 51px;
     padding-left: 15px;
 }
+.profile_sec:hover{
+    border-bottom: 4px solid red;
+}
 .drop-item{
     padding: 20px 20px 20px 0px;
 }
@@ -126,7 +129,6 @@ height: 35px;
     display: none;
 }
 .dropdown:hover{
-    border-bottom: 4px solid red;
     .user-cont{
         display: block;
     }  
