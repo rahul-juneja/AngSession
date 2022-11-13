@@ -1,4 +1,12 @@
 {
+    "users": [
+        {
+          "name": "Rahul",
+          "email": "rahul@orion.in",
+          "password": "Welcome@123",
+          "id": 1
+        }
+      ],
     "men": [
         {
             "name": "Hancock",

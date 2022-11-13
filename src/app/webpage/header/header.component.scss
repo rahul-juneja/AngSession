@@ -109,14 +109,28 @@ height: 35px;
     border-bottom: 1px solid salmon;
 }
 .profile_opt{
-    left: -60px;
+    left: -80px;
+    width: 180px;
+    height: 211px;
+    top: 50px;
+}
+.profile_sec{
+    right: 80px;
+    height: 51px;
+    padding-left: 15px;
+}
+.drop-item{
+    padding: 20px 20px 20px 0px;
 }
 .user-cont{
     display: none;
 }
-.dropdown:hover .user-cont{
-    display: block;
-}
+.dropdown:hover{
+    border-bottom: 4px solid red;
+    .user-cont{
+        display: block;
+    }  
+} 
 .kid-containt{
     display: none;
 }
