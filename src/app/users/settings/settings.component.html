@@ -1,125 +1,224 @@
 <div class="container">
-  <div class="row">
-    <div class="header">
-      <h3>Account</h3>
-      <hr />
-    </div>
-    <div class="col-3" id="overview">
-      <a class="nav-link pb-3" href="#">Overview</a>
-      <div class="orders border-top pb-3 pt-3">
-        <h4>ORDERS</h4>
-        <a class="nav-link" href="#">Orders & Returns</a>
+    <div class="row">
+      <div class="header">
+        <h3>Account</h3>
+        <hr />
       </div>
-      <div class="credits border-top pb-3 pt-3">
-
-        <h4>CREDITS</h4>
-        <a class="nav-link" href="#">Coupons</a>
-        <a class="nav-link" href="#">Myntra Credit</a>
-        <a class="nav-link" href="#">MynCash</a>
-      </div>
-      <div class="account border-top pb-3 pt-3">
-
-        <h4>Account</h4>
-        <a class="nav-link active" href="#">Profile</a>
-        <a class="nav-link" href="#">Saved Cards</a>
-        <a class="nav-link" href="#">Saved VPA</a>
-        <a class="nav-link" href="#">Addresses</a>
-        <a class="nav-link" href="#">Myntra Insider</a>
-      </div>
-      <div class="legal border-top pb-3 pt-3">
-
-        <h4>LEGAL</h4>
-        <a class="nav-link" href="#">Terms of Use</a>
-        <a class="nav-link" href="#">Privacy Policy</a>
-      </div>
-    </div>
-    <div class="border col pb-4 mb-3">
-      <form id="setting">
-        <div class="edit border-bottom mb-4">
-          <h3>Edit Details</h3>
+      <div class="col-3" id="overview">
+        <a class="nav-link pb-3" href="#">Overview</a>
+        <div class="orders border-top pb-3 pt-3">
+          <h4>ORDERS</h4>
+          <a class="nav-link" href="#">Orders & Returns</a>
         </div>
-        <div class="container">
-
+        <div class="credits border-top pb-3 pt-3">
+          <h4>CREDITS</h4>
+          <a class="nav-link" href="#">Coupons</a>
+          <a class="nav-link" href="#">Myntra Credit</a>
+          <a class="nav-link" href="#">MynCash</a>
+        </div>
+        <div class="account border-top pb-3 pt-3">
+          <h4>Account</h4>
+          <a class="nav-link active" href="#">Profile</a>
+          <a class="nav-link" href="#">Saved Cards</a>
+          <a class="nav-link" href="#">Saved VPA</a>
+          <a class="nav-link" href="#">Addresses</a>
+          <a class="nav-link" href="#">Myntra Insider</a>
+        </div>
+        <div class="legal border-top pb-3 pt-3">
+          <h4>LEGAL</h4>
+          <a class="nav-link" href="#">Terms of Use</a>
+          <a class="nav-link" href="#">Privacy Policy</a>
+        </div>
+      </div>
+      <div class="border col pb-4 mb-3">
+        <form id="setting" [formGroup]="update" (ngSubmit)="onSubmit()">
+          <div class="edit border-bottom mb-4">
+            <h3>Edit Details</h3>
+          </div>
+  
           <div class="mb-3">
-            <div class="phone_number d-flex border">
-              <!-- <label for="exampleFormControlInput1" class="form-label">Mobile Number</label> -->
-              <input type="tel" class="form-control border-0" id="exampleFormControlInput1" placeholder="Mobile Number">
-              <button type="button" class="btn change_mobile" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Update
-              </button>
+            <!-- <label for="exampleFormControlInput1" class="form-label">Mobile Number</label> -->
+            <label>Mobile Number</label>
+            <input
+              class="form-control"
+              type="tel"
+              placeholder="Mobile Number"
+              formControlName="num"
+            >
+            <div *ngIf="f['num'].touched || submitted" class="text-danger">
+              <div *ngIf="f['num'].errors?.['required'] ">
+                Mobile Number is Required
+              </div>
+              <div *ngIf=" f['num'].errors?.['pattern']">
+                Pattern is not followed properly
+              </div>
             </div>
-
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-              aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">
-                      Modal title
-                    </h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body"></div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                      Close
-                    </button>
-                    <button type="button" class="btn btn-primary">
-                      Save changes
-                    </button>
-                  </div>
-                </div>
+          </div>
+  
+          <div class="mb-3">
+            <label>Full Name</label>
+            <input
+              class="form-control"
+              id=""
+              rows="3"
+              type="text"
+              placeholder="Full Name"
+              formControlName="name"
+            />
+            <div *ngIf="submitted || f['name'].touched" class="text-danger">
+              <div *ngIf="f['name'].errors?.['required']">Name is Required</div>
+              <div *ngIf="f['name'].errors?.['pattern']">
+                Pattern is not followed properly
               </div>
             </div>
           </div>
           <div class="mb-3">
-            <input class="form-control" id="exampleFormControlTextarea1" rows="3" type="text" placeholder="Full Name" />
-          </div>
-          <div class="mb-3">
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email Address" />
-          </div>
-          <div class="gender mb-3">
-
-            <label>Gender</label>
-            <div class="btn-group w-100" role="group" aria-label="Basic outlined example">
-              <button type="button" class="btn btn-outline-primary">
-                Male
-              </button>
-              <button type="button" class="btn btn-outline-primary">Female</button>
+            <label>Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="exampleFormControlInput1"
+              placeholder="Email Address"
+              formControlName="email"
+            />
+            <div *ngIf="submitted || f['email'].touched" class="text-danger">
+              <div *ngIf="f['email'].errors?.['required']">Email is Required</div>
+              <div *ngIf="f['email'].errors?.['email']">
+                Pattern is not followed
+              </div>
             </div>
           </div>
-
+          <div class="gender" mb-3 >
+  
+          <label class="genderr">Gender</label>
+          <input
+            type="radio"
+            id="male"
+          
+            value="male"
+            formControlName="gender"
+            
+          />
+            <label for="male">Male</label>  
+          <input type="radio" id="female" value="female" formControlName="gender"/>  
+          <label for="female">Female</label>
+          <div *ngIf="submitted || f['gender'].touched" class="text-danger">
+            <div *ngIf="f['gender'].errors?.['required']">Select your gender</div>
+          </div></div>
+  
           <div class="birthday mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Birthday</label>
-            <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="Birthday" />
+            <label for="exampleFormControlInput1" class="form-label"
+              >Birthday</label
+            >
+            <input
+              type="date"
+              class="form-control"
+              id="exampleFormControlInput1"
+              placeholder="Birthday"
+              formControlName="date"
+            />
+            <div *ngIf="submitted || f['date'].touched" class="text-danger">
+              <div *ngIf="f['date'].errors?.['required']">Date is required</div>
+            </div>
           </div>
           <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Location</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Location" />
+            <label for="exampleFormControlInput1" class="form-label"
+              >Location</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="exampleFormControlInput1"
+              placeholder="Location"
+              formControlName="location"
+            />
+            <div *ngIf="submitted || f['location'].touched" class="text-danger">
+              <div *ngIf="f['location'].errors?.['required']">
+                Location is required
+              </div>
+            </div>
           </div>
-
+  
           <div class="d-grid gap-2">
-            <button class="btn btn-danger" type="button">Save Details</button>
-            <button class="btn btn-light" type="button" class="btn btn-warning" data-bs-toggle="modal"
-              data-bs-target="#exampleModal">
+            <button class="btn btn-danger" type="submit">Submit</button>
+            <button
+              class="btn btn-light"
+              type="button"
+              class="btn btn-warning"
+              data-bs-toggle="modal"
+              data-bs-target="#example"
+            >
               CHANGE PASSWORD
             </button>
-
+  
             <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-              aria-hidden="true">
+            <div
+              class="modal fade"
+              id="example"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
                     <h1 class="modal-title fs-5" id="exampleModalLabel">
-                      Modal title
+                      CHANGE PASSWORD
                     </h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
                   </div>
-                  <div class="modal-body"></div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="mb-3">
+                        <label
+                          for="exampleInputEmail1"
+                          class="form-label"
+                        ></label>
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="exampleInputEmail1"
+                          aria-describedby="emailHelp"
+                          placeholder="current password"
+                        />
+                      </div>
+                      <div class="mb-3">
+                        <label
+                          for="exampleInputPassword1"
+                          class="form-label"
+                        ></label>
+                        <input
+                          type="password"
+                          class="form-control"
+                          id="exampleInputPassword1"
+                          placeholder="new password"
+                        />
+                      </div>
+                      <div class="mb-3">
+                        <label
+                          for="exampleInputPassword1"
+                          class="form-label"
+                        ></label>
+                        <input
+                          type="password"
+                          class="form-control"
+                          id="exampleInputPassword1"
+                          placeholder="confirm password"
+                        />
+                      </div>
+                    </form>
+                  </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-bs-dismiss="modal"
+                    >
                       Close
                     </button>
                     <button type="button" class="btn btn-primary">
@@ -130,9 +229,8 @@
               </div>
             </div>
           </div>
-        </div>
-
-      </form>
+        </form>
+      </div>
     </div>
   </div>
-</div>
+  

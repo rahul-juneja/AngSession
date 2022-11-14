@@ -2,31 +2,43 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-settings',
+  selector: 'app-movie',
   templateUrl: './settings.component.html',
   styleUrls: ['./settings.component.scss']
 })
 export class SettingsComponent implements OnInit {
-
-  updateform!:FormGroup
-  submitted=false;
-
-  constructor(private formbuilder:FormBuilder) { }
-
-  ngOnInit() {
-    this.updateform=this.formbuilder.group({
-      number:['',Validators.required],
-    })
-  }
-
-  onSubmit(){
-    this.submitted=true;
+  update!:FormGroup
+  title='validation';
+  submitted:boolean= false;
 
 
-    if(this.updateform.invalid){
+  constructor(private formBuilder:FormBuilder) { }
+
+  ngOnInit(): void {
+    this.update=this.formBuilder.group({
+      num:['',[Validators.required, Validators.pattern("[0-9]{10}")]],
+      name:['',[Validators.required, Validators.pattern('[a-z A-Z]+')]],
+      email:['',[Validators.required,Validators.email]],
+      gender:['',[Validators.required,]],
+      date:['',[Validators.required,]],
+      location:['',[Validators.required,]],
       
-    }
-    alert("success")
-  }
+  })
+  // console.log(this.f['name'].touched)
 
+
+}
+get f(){
+  return this.update.controls
+}
+onSubmit(){
+  debugger
+  if(this.update.valid){
+    // alert('Success!!')
+    console.log(this.update.value);
+  }else{
+    this.submitted = true
+    // alert('please fill the form properly')
+    }
+}
 }
