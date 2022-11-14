@@ -13,13 +13,13 @@
             <input type="email" placeholder="Email" class="input-field" formControlName="email">
             <span class="text-danger" *ngIf="f['email'].touched || submitted">
                 <label for="" *ngIf="f['email'].errors?.['required']">*required</label>
-                <label for="" *ngIf="f['email'].errors?.['pattern']">*put Correct Format</label>
+                <label for="" *ngIf="f['email'].errors?.['pattern']">*Enter a valid email</label>
             </span>
             <br><br>
             <input type="password" placeholder="Password" class="input-field" formControlName="password">
             <span class="text-danger" *ngIf="f['password'].touched || submitted">
                 <span *ngIf="f['password'].errors?.['required']">*required</span>
-                <span *ngIf="f['password'].errors?.['pattern']">*only alphabets</span>
+                <span *ngIf="f['password'].errors?.['pattern']">*format(eg. Ab@1234)</span>
             </span>
             <br><br>
             <button class="login-button" type="submit">Login</button>
