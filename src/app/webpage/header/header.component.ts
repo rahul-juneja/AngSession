@@ -7,19 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   email = localStorage.getItem('email')
-  isCart = (localStorage.getItem('isCart') == 'true'? true: false)
+  isCart = (localStorage.getItem('isCart') == 'true' ? true : false)
   constructor() {
-    
+
+  }
+  ngOnChange(){
   }
   ngOnInit(): void {
-  }
-  show() {
     
   }
   cartShow() {
     localStorage.setItem('isCart', 'true');
   }
-  logout(){
+  logout() {
     localStorage.clear()
   }
 }

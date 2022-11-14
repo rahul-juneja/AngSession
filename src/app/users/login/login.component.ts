@@ -46,7 +46,8 @@ export class LoginComponent implements OnInit {
           localStorage.setItem('pass', this.f['password'].value)
           localStorage.setItem('id', this.user)
           // this.router.navigateByUrl("/home")
-          this.router.navigate(['home'])
+          this.router.navigate([''])
+          window.location.replace('home')
         }
         else {
           alert("Invalid User!")

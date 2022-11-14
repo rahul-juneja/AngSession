@@ -11,5 +11,7 @@ export class AddressComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  headerShow(){
+    localStorage.setItem('isCart', 'false')
+  }
 }
