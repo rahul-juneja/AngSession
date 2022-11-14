@@ -3,17 +3,23 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-isLogin = true
-  constructor() { }
+  email = localStorage.getItem('email')
+  isCart = (localStorage.getItem('isCart') == 'true' ? true : false)
+  constructor() {
 
+  }
+  ngOnChange(){
+  }
   ngOnInit(): void {
     
   }
-  show(){
-    this.isLogin=false;
+  cartShow() {
+    localStorage.setItem('isCart', 'true');
   }
-
+  logout() {
+    localStorage.clear()
+  }
 }

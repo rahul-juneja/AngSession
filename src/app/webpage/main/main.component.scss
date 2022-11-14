@@ -1,4 +1,6 @@
-
+.d-flex{
+    margin-right:450px;
+}
 #log{
     margin-right: 30px;
 }
@@ -23,6 +25,16 @@
 #card1{
     padding:10px;
     margin: 15px;
+}
+.row{
+    margin-right: 0;
+    margin-left: 60px;
+}
+.first-child{
+    margin-left: 8%;
+}
+.second-child{
+    margin-left: 10%;
 }
 #card2{
     padding:10px;
@@ -99,43 +111,11 @@
     padding: 50px;
    
 }
-.search_icon{
-width: 45px;
-height: 35px;
-// position: absolute;
+.ad{
+    margin-right: 0;
+    margin-left: 70px;
 }
-.search_inp:focus{
-    box-shadow: none;
-    border-bottom: 1px solid salmon;
+#fluid{
+    padding-left: 40px;
 }
-.profile_opt{
-    left: -80px;
-    width: 180px;
-    height: 211px;
-    top: 50px;
-}
-.profile_sec{
-    right: 80px;
-    height: 51px;
-    padding-left: 15px;
-}
-.profile_sec:hover{
-    border-bottom: 4px solid red;
-}
-.drop-item{
-    padding: 20px 20px 20px 0px;
-}
-.user-cont{
-    display: none;
-}
-.dropdown:hover{
-    .user-cont{
-        display: block;
-    }  
-} 
-.kid-containt{
-    display: none;
-}
-.dropdown:hover .kid-containt{
-    display: block;
-}
+

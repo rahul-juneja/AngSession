@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-cart',
-  templateUrl: './cart.component.html',
-  styleUrls: ['./cart.component.scss']
+  selector: 'app-address',
+  templateUrl: './address.component.html',
+  styleUrls: ['./address.component.scss']
 })
-export class CartComponent implements OnInit {
+export class AddressComponent implements OnInit {
+
   constructor() { }
 
   ngOnInit(): void {
@@ -13,6 +14,4 @@ export class CartComponent implements OnInit {
   headerShow(){
     localStorage.setItem('isCart', 'false')
   }
-  
-
 }

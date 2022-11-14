@@ -41,11 +41,13 @@ export class LoginComponent implements OnInit {
           }
         })
         if (this.islogged == true) {
-          alert("SuccessFully Logged In!!!")
+          // alert("SuccessFully Logged In!!!")
           localStorage.setItem('email', this.f['email'].value)
           localStorage.setItem('pass', this.f['password'].value)
           localStorage.setItem('id', this.user)
-          this.router.navigateByUrl("/signup")
+          // this.router.navigateByUrl("/home")
+          this.router.navigate([''])
+          window.location.replace('home')
         }
         else {
           alert("Invalid User!")
