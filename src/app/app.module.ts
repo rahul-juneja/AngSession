@@ -18,7 +18,7 @@ import { HeaderComponent } from './webpage/header/header.component';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    CartComponent
+    CartComponent,
    
   ],
   imports: [
