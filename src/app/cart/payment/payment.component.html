@@ -1,6 +1,6 @@
 
 <section class="firstpart">
-  <div class="myn"><a class="navbar-brand" href="#">
+  <div class="myn"><a class="navbar-brand" href="home" (click)="headerShow()">
           <img src="assets/img/myn.png" width="120" height="50" alt="logo">
       </a></div>
   <nav class="navbar navbar-expand-lg navbar-light bg-light d-flex justify-content-center bg-transparent">
@@ -96,13 +96,14 @@
                 </div>
               </div>
             </div>
+<div class="add_card pb-3">
+  <button class="btn btn-success btn-sm " style="text-align:center;margin-left:180px;">Add card</button>
+</div>
 
-            <button class="btn btn-success btn-sm " style="text-align:center;margin-left:180px;">Add card</button>
-            <br><br>
             <div class="">
-              <a href="home">
-                <button class="btn btn-success btn-sm " style="text-align:center;margin-left:164px;">Proceed to pay</button>
-              </a>
+                <button class="btn btn-primary btn-sm " style="text-align:center;margin-left:164px;">
+                  <a class="nav-link" (click)="headerShow()" href="home">Proceed to pay</a>
+                </button>
                 
               </div>
           </form>
