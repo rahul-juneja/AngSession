@@ -1,96 +1,102 @@
 {
-  "users": [
-    {
-      "name": "Rahul",
-      "email": "rahul@orion.in",
-      "password": "Welcome@123",
-      "id": 1
-    },
-    {
-      "name": "Sangram",
-      "email": "sangram@gmail.com",
-      "password": "Tujhe kyun bataunga333@",
-      "id": 2
-    }
-  ],
-  "men": [
-    {
-      "name": "Hancock",
-      "description": "Slim Fit Formal Shirts",
-      "img": "https://cdn.shopify.com/s/files/1/0752/6435/products/vt4_800x.jpg?v=1637702218",
-      "img_2": "assets/products/men/blue_shirt_2.jpg",
-      "price": 264,
-      "discount_price": 599,
-      "discount_perc": 60,
-      "id": 1
-    },
-    {
-      "name": "INVICTUS",
-      "description": "Men Printed Shirts",
-      "img": "assets/products/men/red_shirt.jpg",
-      "img_2": "https://5.imimg.com/data5/VR/QC/MY-10269103/whatsapp-image-2018-07-10-at-1-25-36-pm-500x500.jpeg",
-      "price": 999,
-      "discount_price": 3999,
-      "discount_perc": 60,
-      "id": 2
-    },
-    {
-      "name": "Marks & Spencer",
-      "description": "Cotton Formal Shirts",
-      "img": "https://cf.shopee.com.my/file/357ef0b064a0aa794be0483c5f07783f",
-      "img_2": "https://cf.shopee.com.my/file/33c83fc7565c21cef6f9d50cd16fdfff",
-      "price": 999,
-      "discount_price": 3999,
-      "discount_perc": 60,
-      "id": 3
-    },
-    {
-      "name": "Marks & Spencer",
-      "description": "Cotton Formal Shirts",
-      "img": "https://static.fibre2fashion.com/MemberResources/LeadResources/1/2018/12/Seller/18157582/Images/18157582_0_men-s-shirts.jpg",
-      "img_2": "https://5.imimg.com/data5/DS/RF/MY-5002636/mens-designer-shirt-500x500.jpg",
-      "price": 999,
-      "discount_price": 3999,
-      "discount_perc": 60,
-      "id": 4
-    },
-    {
-      "name": "Marks & Spencer",
-      "description": "Cotton Formal Shirts",
-      "img": "https://5.imimg.com/data5/EL/PA/MY-6827188/dennis-morton-men-27s-ink-blue-party-half-sleeve-art-silk-shirt-500x500.png",
-      "img_2": "https://5.imimg.com/data5/GH/UA/MY-6827188/selection_902-1000x1000.png",
-      "price": 999,
-      "discount_price": 3999,
-      "discount_perc": 60,
-      "id": 5
-    },
-    {
-      "name": "Marks & Spencer",
-      "description": "Cotton Formal Shirts",
-      "img": "https://5.imimg.com/data5/EL/PA/MY-6827188/dennis-morton-men-27s-ink-blue-party-half-sleeve-art-silk-shirt-500x500.png",
-      "img_2": "https://5.imimg.com/data5/GH/UA/MY-6827188/selection_902-1000x1000.png",
-      "price": 999,
-      "discount_price": 3999,
-      "discount_perc": 60,
-      "id": 6
-    }
-  ],
-  "women": [
-    {
-      "name": "Mitera",
-      "description": "Stripped Saree",
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQL1DXEpTY_poKiZ3Aqbw55ry9LE_cBeq4--kP5N2Tog0EAu0K24p2aFN8ET3NwnA0jcQw&usqp=CAU",
-      "img_2": "https://5.imimg.com/data5/QS/OG/MY-15508051/ladies-cotton-saree-500x500.jpg",
-      "price": 1559,
-      "discount_price": 2059,
-      "discount_perc": 30,
-      "id": 1
-    }
-  ],
-  "kids": [
-    {
-      "boys": [],
-      "girls": []
-    }
-  ]
+    "users": [
+        {
+          "name": "Rahul",
+          "email": "rahul@orion.in",
+          "password": "Welcome@123",
+          "id": 1
+        },
+        {
+          "name": "Sangram",
+          "email": "sangram@gmail.com",
+          "password": "Tujhe kyun bataunga333@",
+          "id": 2
+        },
+        {
+          "name": "Dibya",
+          "email": "dibya@gmail.com",
+          "password": "Dibya@1234",
+          "id": 3
+        }
+      ],
+    "men": [
+        {
+            "name": "Hancock",
+            "description": "Slim Fit Formal Shirts",
+            "img": "https://cdn.shopify.com/s/files/1/0752/6435/products/vt4_800x.jpg?v=1637702218",
+            "img_2": "assets/products/men/blue_shirt_2.jpg",
+            "price": 264,
+            "discount_price": 599,
+            "discount_perc": 60,
+            "id": 1
+        },
+        {
+            "name": "INVICTUS",
+            "description": "Men Printed Shirts",
+            "img": "assets/products/men/red_shirt.jpg",
+            "img_2": "https://5.imimg.com/data5/VR/QC/MY-10269103/whatsapp-image-2018-07-10-at-1-25-36-pm-500x500.jpeg",
+            "price": 999,
+            "discount_price": 3999,
+            "discount_perc": 60,
+            "id": 2
+        },
+        {
+            "name": "Marks & Spencer",
+            "description": "Cotton Formal Shirts",
+            "img": "https://cf.shopee.com.my/file/357ef0b064a0aa794be0483c5f07783f",
+            "img_2": "https://cf.shopee.com.my/file/33c83fc7565c21cef6f9d50cd16fdfff",
+            "price": 999,
+            "discount_price": 3999,
+            "discount_perc": 60,
+            "id": 3
+        },
+        {
+            "name": "Marks & Spencer",
+            "description": "Cotton Formal Shirts",
+            "img": "https://static.fibre2fashion.com/MemberResources/LeadResources/1/2018/12/Seller/18157582/Images/18157582_0_men-s-shirts.jpg",
+            "img_2": "https://5.imimg.com/data5/DS/RF/MY-5002636/mens-designer-shirt-500x500.jpg",
+            "price": 999,
+            "discount_price": 3999,
+            "discount_perc": 60,
+            "id": 4
+        },
+        {
+            "name": "Marks & Spencer",
+            "description": "Cotton Formal Shirts",
+            "img": "https://5.imimg.com/data5/EL/PA/MY-6827188/dennis-morton-men-27s-ink-blue-party-half-sleeve-art-silk-shirt-500x500.png",
+            "img_2": "https://5.imimg.com/data5/GH/UA/MY-6827188/selection_902-1000x1000.png",
+            "price": 999,
+            "discount_price": 3999,
+            "discount_perc": 60,
+            "id": 5
+        },
+        {
+            "name": "Marks & Spencer",
+            "description": "Cotton Formal Shirts",
+            "img": "https://5.imimg.com/data5/EL/PA/MY-6827188/dennis-morton-men-27s-ink-blue-party-half-sleeve-art-silk-shirt-500x500.png",
+            "img_2": "https://5.imimg.com/data5/GH/UA/MY-6827188/selection_902-1000x1000.png",
+            "price": 999,
+            "discount_price": 3999,
+            "discount_perc": 60,
+            "id": 6
+        }
+    ],
+    "women": [ 
+        {
+            "name": "Mitera",
+            "description": "Stripped Saree",
+            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQL1DXEpTY_poKiZ3Aqbw55ry9LE_cBeq4--kP5N2Tog0EAu0K24p2aFN8ET3NwnA0jcQw&usqp=CAU",
+            "img_2": "https://5.imimg.com/data5/QS/OG/MY-15508051/ladies-cotton-saree-500x500.jpg",
+            "price": 1559,
+            "discount_price": 2059,
+            "discount_perc": 30,
+            "id": 1
+        }
+    ],
+    "kids": [
+        {
+            "boys": [],
+            "girls": []
+        }
+    ]
 }
