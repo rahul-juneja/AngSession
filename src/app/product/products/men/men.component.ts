@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductsService } from '../../products.service';
+import { ProductserviceService } from '../../productservice.service';
 
 @Component({
   selector: 'app-men',
@@ -7,9 +7,17 @@ import { ProductsService } from '../../products.service';
   styleUrls: ['./men.component.scss']
 })
 export class MenComponent implements OnInit {
-  constructor() { }
+  product:any
+  constructor(private productServ:ProductserviceService) { }
 
   ngOnInit(): void {
+    this.productServ.getProduct('men').subscribe((data:any)=>{
+      console.log(data)
+      this.product = data
+      // data.map((val:any)=>{
+      //   console.log(val)
+      // })
+    })
   }
 
 }

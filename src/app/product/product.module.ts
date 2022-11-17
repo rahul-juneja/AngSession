@@ -4,6 +4,7 @@ import { MenComponent } from './products/men/men.component';
 import { KidboysComponent } from './products/kidboys/kidboys.component';
 import { KidgirlComponent } from './products/kidgirl/kidgirl.component';
 import { WomenComponent } from './products/women/women.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -15,7 +16,8 @@ import { WomenComponent } from './products/women/women.component';
     KidgirlComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    HttpClientModule
   ],
   exports:[
    MenComponent,

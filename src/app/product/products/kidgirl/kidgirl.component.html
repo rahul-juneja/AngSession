@@ -1,16 +1,16 @@
 <div class="row row1">
-    <div class="col-3">
+    <div class="col-3" *ngFor="let item of product">
         <div class="">
             <div id="carouselExampleIndicators" class="carousel slide" style="width: 78%;" data-bs-ride="carousel">
       
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <img src="https://images.meesho.com/images/products/106877175/d4t1j_256.jpg"
+                  <img [src]="item.image"
                     
                     height="300px"width="300px" class="d-block " alt="">
                 </div>
                 <div class="carousel-item">
-                  <img src="https://greentikki.com/wp-content/uploads/2020/10/Untitled-design-4-682x1024-1.png" height="300px"
+                  <img [src]="item.second_image" height="300px"
                   width="300px" class="d-block " alt="">
                 </div>
                
@@ -27,16 +27,16 @@
               </button>
               <div class="card" style="width: 14rem;">
                 <div class="card-body">
-                  <h5 class="card-title">Cutiekins</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">top and skirts</h6>
-                  <p class="card-text"><strong>₹459</strong><del>₹1059</del>(80% Off)</p>
+                  <h5 class="card-title">{{item.name}}</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">{{item.description}}</h6>
+                  <p class="card-text"><strong>{{item.price}}</strong><del>{{item.discount_price}}</del>{{item.discount_percentage}}}</p>
       
                 </div>
               </div>
             </div>
           </div>
     </div>
-    <div class="col-3">
+    <!-- <div class="col-3">
         <div class="">
             <div id="carouselExampleIndicators1" class="carousel slide" style="width: 78%;" data-bs-ride="carousel">
       
@@ -304,6 +304,6 @@
             </div>
           </div>
         
-    </div>
+    </div> -->
   </div>
 
