@@ -10,10 +10,10 @@ export class ApiService {
 
   constructor(private http:HttpClient) { }
   postMethod(data:any){
-    return this.http.post<any>(this.url,data)
+    return this.http.post(this.url,data)
   }
   
   getMothode(){
-    return this.http.get<any>(this.url)
+    return this.http.get(this.url)
   }
 }

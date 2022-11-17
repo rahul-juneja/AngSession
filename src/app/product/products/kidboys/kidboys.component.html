@@ -1,17 +1,17 @@
  
   <div class="row row1">
-    <div class="col-3">
+    <div class="col-3" *ngFor="let item of product">
         <div class="">
             <div id="carouselExampleIndicators" class="carousel slide" style="width: 78%;" data-bs-ride="carousel">
       
               <div class="carousel-inner">
                 <div class="carousel-item active">
                   <img
-                    src="https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/20242200/2022/10/1/1be09201-cc38-47a2-b913-aafe621a048b1664601367738Cottonshirt1.jpg"
+                    [src]="item.image"
                     height="300px"  width="300px"class="d-block" alt="">
                 </div>
                 <div class="carousel-item">
-                  <img src="https://cdn.shopify.com/s/files/1/2348/5467/products/01_1dbb5b36-fa4c-4a85-ae22-a6b40c2438e8_900x.jpg?v=1617196156" height="300px"
+                  <img [src]="item.second_image" height="300px"
                   width="300px" class="d-block" alt="">
                 </div>
                
@@ -28,16 +28,16 @@
               </button>
               <div class="card" style="width: 14rem;">
                 <div class="card-body">
-                  <h5 class="card-title">H&M</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Kidboys cotton shirt</h6>
-                  <p class="card-text"><strong>399</strong></p>
+                  <h5 class="card-title">{{item.name}}</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">{{item.description}}</h6>
+                  <p class="card-text"><strong>{{item.price}}</strong><del>{{item.discount_price}}</del>{{item.discount_percentage}}}</p>
       
                 </div>
               </div>
             </div>
           </div>
     </div>
-    <div class="col-3">
+    <!-- <div class="col-3">
         <div class="">
             <div id="carouselExampleIndicators1" class="carousel slide" style="width: 78%;" data-bs-ride="carousel">
       
@@ -305,7 +305,7 @@
             </div>
           </div>
        
-    </div>
+    </div> -->
     </div>
  
 

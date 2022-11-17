@@ -1,6 +1,57 @@
-# AngSession
+<h1 align="center">Welcome to Myntra 👋</h1>
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-0.0.0-blue.svg?cacheSeconds=2592000" />
+  <a href="https://github.com/rahul-juneja/AngSession#readme" target="_blank">
+    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
+  </a>
+  <a href="https://github.com/rahul-juneja/AngSession/graphs/commit-activity" target="_blank">
+    <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
+  </a>
+  <a href="https://github.com/rahul-juneja/AngSession/blob/master/LICENSE" target="_blank">
+    <img alt="License: ISC" src="https://img.shields.io/github/license/rahul-juneja/Myntra" />
+  </a>
+</p>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.6.
+### 🏠 [Homepage](https://github.com/rahul-juneja/AngSession#readme)
+
+## Install
+
+```sh
+npm install
+```
+
+## Usage
+
+```sh
+ng serve OR ng serve --open
+```
+
+## Run tests
+
+```sh
+ng test
+```
+
+## Author
+
+👤 **Rahul Juneja and other member of my team.**
+
+* Github: [@rahul-juneja](https://github.com/rahul-juneja)
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/rahul-juneja/AngSession/issues). You can also take a look at the [contributing guide](https://github.com/rahul-juneja/AngSession/blob/master/CONTRIBUTING.md).
+
+## Show your support
+
+Give a ⭐️ if this project helped you!
+
+## 📝 License
+
+Copyright © 2022 [Rahul Juneja and other member of my team.](https://github.com/rahul-juneja).<br />
+This project is [ISC](https://github.com/rahul-juneja/AngSession/blob/master/LICENSE) licensed.
+
+## OTHER HELPFULL things ----->
 
 ## Development server
 
