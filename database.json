@@ -7,16 +7,34 @@
           "id": 1
         },
         {
-          "name": "Sangram",
-          "email": "sangram@gmail.com",
-          "password": "Tujhe kyun bataunga333@",
+          "name": "Shibani",
+          "email": "shibani@orion.in",
+          "password": "Shibani@123",
           "id": 2
         },
         {
-          "name": "Dibya",
-          "email": "dibya@gmail.com",
-          "password": "Dibya@1234",
+          "name": "Sangram",
+          "email": "sangram@orion.in",
+          "password": "Sangram@123",
           "id": 3
+        },
+        {
+          "name": "Sangeeta",
+          "email": "sangeeta@orion.in",
+          "password": "Sangeeta@123",
+          "id": 4
+        },
+        {
+          "name": "Dibya",
+          "email": "dibya@orion.in",
+          "password": "Dibya@123",
+          "id": 5
+        },
+        {
+          "name": "Gouri",
+          "email": "gouri@orion.in",
+          "password": "Gouri@123",
+          "id": 6
         }
       ],
     "men": [
