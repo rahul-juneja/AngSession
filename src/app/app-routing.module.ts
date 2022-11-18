@@ -21,19 +21,21 @@ import { SignupComponent } from './users/signup/signup.component';
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: MainComponent },
-  { path: 'header', component: HeaderComponent },
-  { path: 'men', component: MenComponent },
-  { path: 'women', component: WomenComponent },
-  { path: 'cart', component: CartComponent },
-  { path: "setting", component: SettingsComponent },
-  { path: "kidboys", component: KidboysComponent },
-  { path: "kidgirl", component: KidgirlComponent },
-  { path: 'productinfo', component: ProductInfoComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'signup', component: SignupComponent },
-  { path: 'address', component: AddressComponent },
-  { path: 'payment', component: PaymentComponent },
-  { path: 'wishlist', component: WishlistComponent },
+  { 
+    path: 'cart', 
+    loadChildren: ()=> import('./cart/cart.module')
+    .then(m=>m.CartModule)
+  },
+  { 
+    path: 'product', 
+    loadChildren: ()=> import('./product/product.module')
+    .then(m=>m.ProductModule)
+  },
+  { 
+    path: 'user', 
+    loadChildren: ()=> import('./users/users.module')
+    .then(m=>m.UsersModule)
+  },
   { path: '**', redirectTo: 'home', pathMatch: 'full' }
 ];
 

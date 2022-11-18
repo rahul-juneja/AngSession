@@ -29,6 +29,12 @@
                 <label class="text-danger" for="" *ngIf="f['password'].errors?.['pattern']">*format(eg. Ab@1234)</label>
             </span>
             <br><br>
+            <input type="password" placeholder="Password Again" class="input-field" (input)="confirmPass()" formControlName="repassword">
+            <span class="text-danger" *ngIf="f['repassword'].touched || submitted">
+                <label class="text-danger" for="" *ngIf="f['repassword'].errors?.['required']">*required</label>
+                <label class="text-danger" for="" *ngIf="!f['repassword'].errors?.['required'] && !confirm">DidN't Match</label>
+            </span>
+            <br><br>
            
             
             <button class="signup-button" type="submit">Sign Up</button>

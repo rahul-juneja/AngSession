@@ -21,12 +21,24 @@ export class SignupComponent implements OnInit {
     this.signupValue = this.formBuilder.group({
       name: ['', [Validators.required, Validators.pattern('[a-zA-Z]+')]],
       email: ['', [Validators.required, Validators.pattern('^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$')]],
-      password: ['', [Validators.required, Validators.pattern('((?=.*[a-z])(?=.*[A-Z])(?=.*[$@$!%*?&]).{8,30})')]]
+      password: ['', [Validators.required, Validators.pattern('((?=.*[a-z])(?=.*[A-Z])(?=.*[$@$!%*?&]).{8,30})')]],
+      repassword: ['', Validators.required]
     })
   }
 
   get f() {
     return this.signupValue.controls
+  }
+  confirmPass() {
+    if (this.signupValue.controls['password'].value === this.signupValue.controls['repassword'].value) {
+      this.confirm = true;
+      return true
+    }
+    else {
+      this.confirm = false;
+      console.log('Here');
+      return false
+    } 
   }
   signupFormValue() {
     this.submitted = true;
@@ -35,15 +47,16 @@ export class SignupComponent implements OnInit {
         name: this.f['name'].value,
         email: this.f['email'].value,
         password: this.f['password'].value,
+        repassword: this.f['repassword'].value
       }
       this.api.postMethod(this.data).subscribe(res => {
-        alert("Account Created!!!");
+        // alert("Account Created!!!");
         console.log(this.data);
-        this.router.navigateByUrl("/login");
+        this.router.navigateByUrl("/user/login");
       })
     }
   }
   login(){
-    this.router.navigateByUrl("/login");
+    this.router.navigateByUrl("/user/login");
   }
 }

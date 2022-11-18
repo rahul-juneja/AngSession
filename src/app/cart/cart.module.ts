@@ -4,6 +4,7 @@ import { ProductInfoComponent } from '../product/productinfo/productinfo.compone
 import { AddressComponent } from './address/address.component';
 import { PaymentComponent } from './payment/payment.component';
 import { WishlistComponent } from '../product/wishlist/wishlist.component';
+import { CartRoutingModule } from './cart-routing.module';
 
 
 
@@ -16,7 +17,8 @@ import { WishlistComponent } from '../product/wishlist/wishlist.component';
     WishlistComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    CartRoutingModule
   ]
 })
 export class CartModule { }

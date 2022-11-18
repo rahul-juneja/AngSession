@@ -11,9 +11,9 @@ product:any
   constructor(private productserv:ProductserviceService) { }
 
   ngOnInit(): void {
-    this.productserv.getProduct('kidgirl').subscribe((data:any)=>{
+    this.productserv.getProduct('kids').subscribe((data:any)=>{
       console.log(data)
-      this.product = data
+      this.product = data.products
     })
   }
 

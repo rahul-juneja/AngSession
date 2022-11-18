@@ -5,6 +5,7 @@ import { SignupComponent } from './signup/signup.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { SettingsComponent } from './settings/settings.component';
+import { UsersRoutingModule } from './users-routing.module';
 
 
 
@@ -18,7 +19,8 @@ import { SettingsComponent } from './settings/settings.component';
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    UsersRoutingModule
   ]
 })
 export class UsersModule { }
