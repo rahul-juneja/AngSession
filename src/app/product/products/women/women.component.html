@@ -2,7 +2,7 @@
     
    <div class="col-3" *ngFor="let item of product">
         <div class="">
-            <div id="carouselExampleIndicators1" class="carousel slide" style="width: 78%;" data-bs-ride="carousel">
+            <div [id]="'carouselExampleIndicators'+item.id"  class="carousel slide" style="width: 78%;" data-bs-ride="carousel">
       
               <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -16,12 +16,12 @@
                 </div>
                 
               </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators1"
+              <button class="carousel-control-prev" type="button" [attr.data-bs-target]="'#carouselExampleIndicators1'+item.id"
                 data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
               </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators1"
+              <button class="carousel-control-next" type="button" [attr.data-bs-target]="'#carouselExampleIndicators1'+item.id"
                 data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>

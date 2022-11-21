@@ -1,6 +1,7 @@
 {
     "products": [
         {
+            "id":1,
             "name": "Peter England",
             "description": "Slim Fit Formal Shirts",
             "image": "https://5.imimg.com/data5/XI/XR/MY-33951838/slim-fit-formal-shirt-500x500.jpg",
@@ -11,6 +12,7 @@
             "category": "men"
         },
         {
+            "id":2,
             "name": "Roadster",
             "description": "Formal pants",
             "image": "https://m.media-amazon.com/images/I/61FjkEaXTNL._UL1500_.jpg",
@@ -21,6 +23,7 @@
             "category": "men"
         },
         {
+            "id":3,
             "name": "HRX",
             "description": "Cotton floral T-shirts",
             "image": "https://5.imimg.com/data5/DD/EE/MY-60797658/mens-floral-shirt-500x500.jpg",
@@ -31,6 +34,7 @@
             "category": "men"
         },
         {
+            "id":4,
             "name": "Addidas",
             "description": "Track Pants",
             "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrWph74PeAP66BgpEdHSVLPNmBmWSaI4DazOCLzmTzhvchkQpaFGVR3n-9TffJY472qdE&usqp=CAU",

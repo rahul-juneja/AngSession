@@ -1,7 +1,7 @@
 <div class="row row1">
   <div class="col-3" *ngFor="let item of product">
     <div class="">
-      <div id="carouselExampleIndicators" class="carousel slide" style="width: 78%;" data-bs-ride="carousel">
+      <div [id]="'carouselExampleIndicators'+item.id" class="carousel slide" style="width: 78%;" data-bs-ride="carousel">
 
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -11,16 +11,16 @@
           </div>
           <div class="carousel-item">
             <img [src]="item.second_image"
-            width="300px"   class="d-block" alt="">
+            height="300px" width="300px"   class="d-block" alt="">
           </div>
           
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        <button class="carousel-control-prev" type="button" [attr.data-bs-target]="'#carouselExampleIndicators'+item.id"
           data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        <button class="carousel-control-next" type="button" [attr.data-bs-target]="'#carouselExampleIndicators'+item.id"
           data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>

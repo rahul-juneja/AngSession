@@ -13,7 +13,7 @@ product:any
   ngOnInit(): void {
     this.productserv.getProduct('kids').subscribe((data:any)=>{
       console.log(data)
-      this.product = data.products
+      this.product = data
     })
 
     }

@@ -13,7 +13,7 @@ export class WomenComponent implements OnInit {
   ngOnInit(): void {
     this.productServ.getProduct('women').subscribe((data:any)=>{
       console.log(data)
-      this.product = data.products
+      this.product = data
     })
   }
 

@@ -1,309 +1,41 @@
 <div class="row row1">
-    <div class="col-3" *ngFor="let item of product">
-        <div class="">
-            <div id="carouselExampleIndicators" class="carousel slide" style="width: 78%;" data-bs-ride="carousel">
-      
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img [src]="item.image"
-                    
-                    height="300px"width="300px" class="d-block " alt="">
-                </div>
-                <div class="carousel-item">
-                  <img [src]="item.second_image" height="300px"
-                  width="300px" class="d-block " alt="">
-                </div>
+    
+  <div class="col-3" *ngFor="let item of product">
+       <div class="">
+           <div [id]="'carouselExampleIndicators'+item.id"  class="carousel slide" style="width: 78%;" data-bs-ride="carousel">
+     
+             <div class="carousel-inner">
+               <div class="carousel-item active">
+                 <img
+                   [src]="item.image"
+                   height="300px" width="300px"  class="d-block " alt="">
+               </div>
+               <div class="carousel-item">
+                 <img [src]="item.second_image" height="300px"
+                 width="300px"   class="d-block " alt="">
+               </div>
                
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-              <div class="card" style="width: 14rem;">
-                <div class="card-body">
-                  <h5 class="card-title">{{item.name}}</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">{{item.description}}</h6>
-                  <p class="card-text"><strong>{{item.price}}</strong><del>{{item.discount_price}}</del>{{item.discount_percentage}}}</p>
-      
-                </div>
-              </div>
-            </div>
-          </div>
-    </div>
-    <!-- <div class="col-3">
-        <div class="">
-            <div id="carouselExampleIndicators1" class="carousel slide" style="width: 78%;" data-bs-ride="carousel">
-      
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img
-                    src="https://rukminim1.flixcart.com/image/332/398/xif0q/skirt/7/r/z/9-10-years-1-ulkw20bt10-05-724-uptownie-lite-original-imag8zersggmffnj-bb.jpeg?q=50"
-                    height="300px"width="300px"class="d-block " alt="">
-                </div>
-                <div class="carousel-item">
-                  <img src="https://rukminim1.flixcart.com/image/332/398/xif0q/skirt/o/f/c/7-8-years-1-ulkw20bt10-05-222-uptownie-lite-original-imag8ze2wzzhebzy-bb.jpeg?q=50" height="300px"
-                  width="300px"  class="d-block " alt="">
-                </div>
-                
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators1"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators1"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-              <div class="card" style="width: 14rem;">
-                <div class="card-body">
-                  <h5 class="card-title">Naughty Nions</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Girl printed fit and flare dress</h6>
-                  <p class="card-text"><strong>₹1759</strong><del>₹3589</del>(51% Off)</p>
-      
-                </div>
-              </div>
-            </div>
-          </div>
-        
-    </div>
-    <div class="col-3">
-        <div class="">
-            <div id="carouselExampleIndicators8" class="carousel slide" style="width: 78%;" data-bs-ride="carousel">
-      
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img
-                    src="https://assets0.mirraw.com/images/7159010/image_large_m.jpeg?1561707630"
-                    height="300px"width="300px" class="d-block " alt="">
-                </div>
-                
-                <div class="carousel-item">
-                  <img src="https://assets0.mirraw.com/images/7159029/image_small.jpeg?1561708063" height="300px"
-                  width="300px" class="d-block " alt="">
-                </div>
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators8"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators8"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-              <div class="card" style="width: 14rem;">
-                <div class="card-body">
-                  <h5 class="card-title">Pspeaches</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">printed top and skirts</h6>
-                  <p class="card-text"><strong>₹653</strong><del>₹2059</del>(69% Off)</p>
-      
-                </div>
-              </div>
-            </div>
-          </div>
-        
-    </div>
-    <div class="col-3">
-        <div class="">
-            <div id="carouselExampleIndicators5" class="carousel slide" style="width: 78%;" data-bs-ride="carousel">
-      
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQppyELoS7Rqn0X3jRj9TwBm40hcttqviWiFh_Q85_K69WEt7MBEILe0gZ-xmhWd7YUg5I&usqp=CAU"
-                    height="300px"width="300px" class="d-block " alt="">
-                </div>
-                <div class="carousel-item">
-                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk6CqyJH_k3Flfc1ANEtim5KfWOJhnXQ84jdgJajKmvsrIpw4oWsz2v2gsUIFcWlmAu60&usqp=CAU" height="300px"
-                  width="300px" class="d-block " alt="">
-                </div>
-               
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators5"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators5"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-              <div class="card" style="width: 14rem;">
-                <div class="card-body">
-                  <h5 class="card-title">A.T.U.N</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Multicolour Kruti</h6>
-                  <p class="card-text"><strong>₹1399</strong><del>₹3999</del>(65% Off)</p>
-      
-                </div>
-              </div>
-            </div>
-          </div>
-        
-    </div>
-  </div>
-  <br><br>
-  <div class="row row2">
-    <div class="col-3">
-        <div class="">
-            <div id="carouselExampleIndicators4" class="carousel slide" style="width: 78%;" data-bs-ride="carousel">
-      
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img
-                    src="https://img.joomcdn.net/3721ba26ef96180261edcefb25d63a10ea2df1b1_original.jpeg"
-                    height="300px"width="300px" class="d-block " alt="">
-                </div>
-                <div class="carousel-item">
-                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDc6aBFYRaDovq2WsluiyehzeRmXBhKBNWUWzqnSuuSQI-vvLNYNYPBzk8VG_148iw75U&usqp=CAU" height="300px"
-                  width="300px"  class="d-block " alt="">
-                </div>
-                
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators4"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators4"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-              <div class="card" style="width: 14rem;">
-                <div class="card-body">
-                  <h5 class="card-title">Joom</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Cowgirl Trouser pant</h6>
-                  <p class="card-text"><strong>₹999</strong><del>₹1699</del>(30% Off)</p>
-      
-                </div>
-              </div>
-            </div>
-          </div>
-    </div>
-    <div class="col-3">
-        <div class="">
-            <div id="carouselExampleIndicators6" class="carousel slide" style="width: 78%;" data-bs-ride="carousel">
-      
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img
-                    src="https://5.imimg.com/data5/XY/TF/MY-26152501/party-wear-fancy-kids-gown-500x500.jpg"
-                    height="300px"  width="300px" class="d-block " alt="">
-                </div>
-                <div class="carousel-item">
-                  <img src="https://5.imimg.com/data5/XR/KU/MY-26152501/kids-gown-500x500.jpg" height="300px"
-                  width="300px"  class="d-block " alt="">
-              
-                </div>
-                
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators6"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators6"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-              <div class="card" style="width: 14rem;">
-                <div class="card-body">
-                  <h5 class="card-title">White World</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Ready to wear</h6>
-                  <p class="card-text"><strong>₹759</strong><del>₹1589</del>(51% Off)</p>
-      
-                </div>
-              </div>
-            </div>
-          </div>
-        
-    </div>
-    <div class="col-3">
-        <div class="">
-            <div id="carouselExampleIndicators9" class="carousel slide" style="width: 78%;" data-bs-ride="carousel">
-      
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img
-                    src="https://i.pinimg.com/736x/58/79/79/587979bc3d7ac9069c965a5230f758c5.jpg"
-                    height="300px"width="300px" class="d-block " alt="">
-                </div>
-                
-                <div class="carousel-item">
-                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvEHoA-4lmwRIgmRREnRxEC-Kvhkh45Q2xHMDKoEVR4tBrlcTGb4aoZPuXkld94UiQJHY&usqp=CAU" height="300px"
-                  width="300px" class="d-block " alt="">
-                </div>
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators9"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators9"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-              <div class="card" style="width: 14rem;">
-                <div class="card-body">
-                  <h5 class="card-title">Sangari</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Ethnic colthes</h6>
-                  <p class="card-text"><strong>₹599</strong><del>₹1599</del>(70% Off)</p>
-      
-                </div>
-              </div>
-            </div>
-          </div>
-        
-    </div>
-    <div class="col-3">
-        <div class="">
-            <div id="carouselExampleIndicators2" class="carousel slide" style="width: 78%;" data-bs-ride="carousel">
-      
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKfZHaEBkGcJmoVs376IpvwoBfJ8fnZhmr6AOzTEmVE-unmJ2gKe7SEWhnQ150Q3dWpb8&usqp=CAU"
-                    height="300px"width="300px" class="d-block " alt="">
-                </div>
-                <div class="carousel-item">
-                  <img src="https://i.pinimg.com/736x/49/e3/14/49e31456917ef7f922f7a91d2bcc0420.jpg" height="300px"
-                  width="300px"  class="d-block " alt="">
-                </div>
-               
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators2"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators2"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-              <div class="card" style="width: 14rem;">
-                <div class="card-body">
-                  <h5 class="card-title">Pink Chik</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Girl net Flare dress</h6>
-                  <p class="card-text"><strong>₹2479</strong><del>₹4300</del>(71% Off)</p>
-      
-                </div>
-              </div>
-            </div>
-          </div>
-        
-    </div> -->
-  </div>
-
+             </div>
+             <button class="carousel-control-prev" type="button" [attr.data-bs-target]="'#carouselExampleIndicators1'+item.id"
+               data-bs-slide="prev">
+               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+               <span class="visually-hidden">Previous</span>
+             </button>
+             <button class="carousel-control-next" type="button" [attr.data-bs-target]="'#carouselExampleIndicators1'+item.id"
+               data-bs-slide="next">
+               <span class="carousel-control-next-icon" aria-hidden="true"></span>
+               <span class="visually-hidden">Next</span>
+             </button>
+             <div class="card" style="width:14rem;">
+               <div class="card-body">
+                 <h5 class="card-title">{{item.name}}</h5>
+                 <h6 class="card-subtitle mb-2 text-muted">{{item.description}}</h6>
+                 <p class="card-text"><strong>{{item.price}}</strong><del>{{item.discount_price}}</del>{{item.discount_percentage}}</p>
+     
+               </div>
+             </div>
+           </div>
+         </div>
+       
+   </div>
+   </div>
