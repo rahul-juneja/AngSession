@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
-import { CartservService } from 'src/app/cart/cartserv.service';
 import { ApiService } from 'src/app/users/api.service';
 import { ProductserviceService } from '../productservice.service';
 
@@ -15,7 +14,7 @@ export class ProductInfoComponent implements OnInit {
   prodId = localStorage.getItem('prodId')
   cartDataList:any=[]
   productList: any=[]
-  constructor(private formBuilder: FormBuilder, private productServ: ProductserviceService, private cartServ: CartservService) { }
+  constructor(private formBuilder: FormBuilder, private productServ: ProductserviceService) { }
 
   ngOnInit(): void {
     this.productServ.getProduct("men/"+this.prodId).subscribe((data:any)=>{
@@ -30,6 +29,5 @@ export class ProductInfoComponent implements OnInit {
   addToCart(product:any){
     console.log(product)
     // localStorage.setItem("cartItems", JSON.stringify(product))
-    this.cartServ.addToCart(product)
   }
 }
