@@ -15,27 +15,297 @@
                  width="300px"   class="d-block " alt="">
                </div>
                
-             </div>
-             <button class="carousel-control-prev" type="button" [attr.data-bs-target]="'#carouselExampleIndicators1'+item.id"
-               data-bs-slide="prev">
-               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-               <span class="visually-hidden">Previous</span>
-             </button>
-             <button class="carousel-control-next" type="button" [attr.data-bs-target]="'#carouselExampleIndicators1'+item.id"
-               data-bs-slide="next">
-               <span class="carousel-control-next-icon" aria-hidden="true"></span>
-               <span class="visually-hidden">Next</span>
-             </button>
-             <div class="card" style="width:14rem;">
-               <div class="card-body">
-                 <h5 class="card-title">{{item.name}}</h5>
-                 <h6 class="card-subtitle mb-2 text-muted">{{item.description}}</h6>
-                 <p class="card-text"><strong>{{item.price}}</strong><del>{{item.discount_price}}</del>{{item.discount_percentage}}</p>
-     
-               </div>
-             </div>
-           </div>
-         </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+              <div class="card" style="width: 14rem;">
+                <div class="card-body">
+                  <h5 class="card-title">{{item.name}}</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">{{item.description}}</h6>
+                  <p class="card-text"><strong>{{item.price}}</strong><del>{{item.discount_price}}</del>{{item.discount_percentage}}}</p>
+      
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+    <!-- <div class="col-3">
+        <div class="">
+            <div id="carouselExampleIndicators1" class="carousel slide" style="width: 78%;" data-bs-ride="carousel">
+      
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMSEhUUExIVFhUXGBgWGRUXGBgaFRcXFRoXFhUXGBccHSggGBolGxcVITEhJSkrLi4uFx8zODMsNygtLisBCgoKDg0OGxAQGzImICY3LS0tLS8vLTAtLS0tLS0tLS0tLS8tLS0tLS0tLS0tLy4tLS0tLS0tLS0tLS0tLS0tLf/AABEIAOEA4QMBIgACEQEDEQH/xAAcAAEAAgIDAQAAAAAAAAAAAAAABAUDBwIGCAH/xABDEAABAgMFBAcFBQcCBwAAAAABAAIDBBEFEiExQQYiUWEHEzJCcYGRFFKhsdFicpLB4RUjM0OCovDC4iQ0U2ODstL/xAAZAQEAAwEBAAAAAAAAAAAAAAAAAQIDBAX/xAA1EQACAQIEAwYFBAEFAQAAAAAAAQIDEQQSITFBUWETInGBkfChscHR4QUUMvFiM0JSctIj/9oADAMBAAIRAxEAPwDeKIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIi4PeBmQPFAc0WOFFa7skHwNVkQBERAEREAREQBERAEREAREQBERAEREAREQBERAERVtqW1Lyzax4zIYOV47x8G5u8ghKTbsjWnTdtS6F1UpBe5riOtiFji03cQxtRjQm8acgtaS9uFw3okUEa9dGbX+oOVrtVHE/MxYhODnEtdwYOx/aG4LrE1AMLAjDjoVzuUZuy3PZpYerhUqkoxcOqT1/D47aFlLbQRKis3MgV0jxh8nKbM7Rva3dnJqtdZiYPzcunUNd3PhmfLithbB7AftOVdGMyYREQwrvVh1S1rXA1vDO98Fbs9dGzGGNioSvCN3s8t/diml9oXOrfmpo5fz5jn9pQp+1mvOJcRTvlzj/cSm11iGRnIkqyIYlwM3y27W8xrzgMqXlTxhwNUdNZtWSsbLsu5CKfNR1+/od86MtqjLTrG1pAjUhvaOyCcGRKcQczwJ4BejF5IsgdUS93De+yPqt3bM9JsKJCh9cyIDdaC/A3iBS8W1qK56qFUjF2ewq4OtXiqsVebvdcbaWfXl8DZKKusu2YEy29AitiDWhxHJzc2+YVitzy2mnZhERCAiIgCIiAIiIAiIgCIiAIiIAiIgCjT84yDDdFiuDWMBc5xyAC+zcyyExz3uDWMBc5xNAGjEk+S0ptZt17aXNZVsNpoxhzePfI48tFSpPKrnXg8L+4qZW7Li/oubZw2m6XZiK9zJVvUwgSA84xX014MHIVPNa9ti2o0Uhzn1ONXGpNeZJxVjJQWMeb13EnePArjPdRTuZ8D9Fi5pyTsepSwtSnh5JVFHp6cVZsr7NtZ96l0uac6DEUwqFPn3dYKHFvd414+K+yloQmggCo5NoFWzVrFka8xoA1aTUH6FUyty0Vjd16dPDKNSrmTeul+nC9+dr77cj6bOdCxOZyOg/VWNnW1MtBbBmYkFjTee5rsCThUs1cbtPJc4dsw4rKN3SRvB35HVdZjRAYhc2gFaAch/lVeLk730Zy4mFCll7FqUHwvv5+l9pcE1uSbVtKJGiOc973ucRV7jV76ANbePgAKKXZMGmLsDzyH6qRZcmwsvkgjj7n0cognGPeQA5zAcMt7mVEpZk1E0o4dUJRq1JLvfxXJeXLp0W5gtWaLnUAIaNcd8+8eSzytqxGtABwAyICzTE3DLjmMtOQ4KxgS8FwGLXbuWNVEpJRScTSlRlVxE506yv6cej+nqVln7QxIbw9pc0g1DmOLTnXPNbP2I6S5hj7loG9DcdyLQCIz74GDm+VdcVrMSLAQQMqHlgVMn5gXd3eLu77vipc7PuIpDCupTl+6lttb72v0S15nqOBFa9oc0gtIqCDUEHIg6hZV596MNvokpEEvMEvl3ntHOCT3h9gnMaZjUHf0OIHAEEEEVBGIIORBXSnc8CUXF++Hv4mRERSVCIiAIiIAiIgCIiAIiIAiKl2ptf2WXfFwvUusB1ea3a8tTyBUNpK7LQhKclGKu3ojonSrtAIlZOGQ4YdbQ97BzWYcMHHnTmtMzsFzH3mmoBz4LPaT4rXOiPJL3EkxOLnYk18yuFnT4c6j/AMWnmsO9dzWqPatQyRwslkkv93Xnz+lrWZNnG9eYJZSovAivZyP1UGckngZtz5rJFi9RFqBUEVGOGPaWGctBxGTc1VZtMuxtWeHfaOt/PZ2vbRJX81qcZSQJrVx8lymLNaD2fUqNLzz8aOp4UXyYLyRW8fVWyyzas5VWwqodynd+XPzfwJ/7OAaDcHxVc6TDjUUGKzQpSIW9grLIS8QVpdAa7J1M6V+XzUK6vZmlWdOcYZ6TjF218vBEd9nvpS9QHTGh8eKmSNk7p3tfd8FxmrTfQYN45fqvstaTwO7n7oR9o4l4vAxr7N6deXijHM2aQ40d8OSl/sx93u5ceXNQ41ouvHAKw/a27Qt07ruSiXaJImh+xlOe69eviVcGFEaRgcPRcGlxeeOpU6HaDXYUOK4WgRDaAMXa8/0Cu5u9mtWcscLScM0J3jHV/ZdX91u1eygFlz3W8e8T9VsDof27rE9gjnA19ncTkRiYR8c2+Y4LUEi5z3Xczp/mit2SPVERASXtINR3SDVpHMHVVjak9dzordpj6a7ONox38vtyXXoer0XVtgNqG2hLX6jrYZDIrRo+mDgPdcMR5jRdpXSnc8KUXFtMIiIQEREAREQBERAEREAWh+lHbAxZswYZBhQas+9Er+8dXl2fI8VtHbraRkjLF5dR76sh/eIxd4NGPpxWhLQDIgvnEu7Lxnzx1WFaaXdaPX/TMNKSlXjKzjt9fol4taEZ082LUD8B/wAxWGHZVGFzTjjVpy8lDfIObvUqBqFkbajgy6d4O11p+ao4tf6bOqOIjK7xkbPg/fXTS6OFnsD7weDgQQORqD8mqZNybAHbh81DixR1Rc04kgYZ6k/kozob3A4OPj+qlpt3vYpCrCnFwyZ3a99L636Ph8LFlIRGNObW4LnOzzMN+ueQKqpORe40oPVTZiynACrm/FQ4wzasvTxGKlh2oU7L8+RMlbRZcpvZ8ElWw4j8Q2hOTtaZVCxSVlVB3v7f9yiRrPc2Jugu5/ooywbdma9rilTpyqU01daafS5Z2jJQ6Dc1XCFAhN3bld5VM1LxABVjljdOvBz11opVNtWze/UxqY6nTquUqVtuC5O+6RbTkg2tboocqEaYccF9dIwy00LgQMqhQ4tpOu0wONctcs1jgT53t0DDmmSdtGI4nDdo1KK1vw4a/EkSdnVcN/j3VhEmXxHVyBp6d0LhIWg8O7VcNQFzbPXXOqMXac+KmSnczoVMHKnHgr6+mnF8TkGiCeFMa8Vkm7RMQUGDPifFV8a9ENczw4BWtjy4ad7eJ9AVEkksz3L0p1KtR0aXdpv3w6cF5stujm2YlnTjYrsIL6Mit4sJwfTi04jlUar0xDiBwBBqCKgjIg5FeVbUnh3cSMz3f9y3F0J7Ve0yxlYjqxZel2uboJ7H4Tu+F3itaUpSV2edj6FGhNQpu/P3tpqtOnE2YiItThCIiAIiIAiIgC+VX1dD6WNoHS0oYUOpiRqtwzbD77vOt0ePJQ2krsvThKpJRjv7/s150n2gZ2a3H/u4QLGjQiu87+o/ANWvHvex2o+R+qlttR7RQ41wxzCsLODIoNd5re6c6rmzShdz1R7ro0MQ40sPLLJe/u216M+SloNuUduHX3SoMeUbEOGBPolrSF00ZjrTUKPZsZ0M1w+6f8wURirZostWrSc1h8TG8VxXvfw16Gfq+qaWuIFcuY4r660GXaYnd0C42x+9LXs0F010OJ/NYpWzCQCXI1FpORMZ1o1ZUsPG8eD5rzduNtuB9lLRAcDd+Kkzlrkt7Lc+aiS0gLwxOaso1lMDSacOP1UydNSWhFCGOnRklJL+vAhStqvxy9FIk7Rq+js6HGt0ZE5rJJyEOpqBkkSQa6JgaYUwoquUG9i8aGMVKLU76/XqYpy02kNwfXy+q+vY1zsmnHlqvk5ZgAG8ddAuP7IqA5rsef1UrIlo7E1I4uU2pwUtuK/NyynJGGWu/dgHzVdLycPfJbk0kYuUOYa8VaGmtVkbZ8YAkvpUZYlQo2X8hOt2ta6obb7dediZJiG4904clGtaWBc26ABQ1cM1Hg2c+ppQ+f1X3qXQ6lzcxhlnX6K9kpXTMXUnUoZKtKy4vlbrb6llIvYxlez73FxVPNzRJoKgfErhALnOpnX0CvWWWA2vaeMeXOiaU5XlqQnVx1LJSWWMdH1/vey89SPZ0hfFXYD3df0VxY1rGzZiHGZ3T2ffYe23zHxAKozalw0bjxdosUWC+Lji48VFpZrydkTKpR7Ls6Mc09nxv75LS63PWFmT8OYhQ40J16HEaHtPEOFR4Hkpi070I2/1YMjEdUEuiQSdDnEhj4uH9S3EulNPY8KpSlTdpIIiKSgREQBERAYo0QNaXOIAAJJOQAxJK88bQ7VCdmnxHYMrSGTkIbezXgTi483LZnS9tD7PKGC1t58fdIrSkL+YfMbvmeC0TMsBbWFUE5tOY5A94LGraXdZ6n6e50b1o78E+K6c77aO6V+BItGG2K/LE5Ef5isczJOgCug744/kodnPfDdXXgclaTdqNeA3snVp1KzeZNJbHdCVCtCVWfdqPbx+uuutpW8Csl54ufv6nMLtDLN9pLIUBpfEdhDI+JcdGjMk5BVUvYgu38nHEDSngt69GWyokZVrojQJiKL0QnNoOLYVeDRnzqijGpLu6WKyr18HRarLM53s39fDfne2pp3pBsiFZroUqyr3CCHxImRfEiOdU00ADWgDhRdVhWk67QUC7/0xQGxJ6I41wuMzwwYD8yV06RhQ2g1azPX9VMpQ104lcNQxScVnyqytzs1fx+JUsmX17Rz0UyKIhacH/FSPaWhx3xnpVWU1aUO6d6uHulRKburRJpYWGWanW+K69Tr8tLxCcGHJZQ58N9KluuimylpsDqm9ksj5yG92Tf8AyDAHOtAcVZyk3qtCkMPQVK9Kp3r80vsVk3PPIG+VzlpuIB23Zq0nZlgA/eNJ5A054DJJO0IdKX9eDlTN3dI+/Q3/AG9q/er2dufT/sUkedfeO/8AJSYtrRKUq3L3WqXNzEMuO+NOPBZy+EW5s7PLgjkrLuilQqZpqNf4+P8AkVcjahBxaDh4LsmxEOFPTrZWKyjY0KMwO1a8ML2PHMXCQqCWlobnf/JXZdiZVsG05J4vfxLuJ98Fn+pWThnWmplKni3hZd5OPvoVdqWO6Te+HEBBa4hxPEcOIOBHIhVsW0nRBQVAHqfFbq6ZtkXTUETMFpMWEKPYO/D4/eZn4V5LTVnSvVEF2LuGgUuKjvq+BSjWqVssaSyw0UuV/nbil6uxGFmmoLhRp01/RXEGcYxgBzHcGZWK1J0Ft1u8fe0H1VDCLq19VVRdSPeNp1qWAq5aGt93y+mj1ttzuydDtKLDjMiwjddDeHsA4tNRXiNPBep7AteHNy8OPDILYja/ddk9p5tcCD4LzDZkreO9hw4nlyWz+jHaNstFEq9wZDimjATlFOQHJ2XjTitI1EmoHHVwNWpSliW+tnvb8cuWxuJERbHlBERAFxc6gqclyXFzaihyKA8zbT7U+3Tr3uqGXi1h4Qmkhg5VGJ5uKhWm1j+GPeC2ztT0RS8W9EkqQIh/lmvUu5AZw/Ko5LTdt2NNScbq40N0Nwyr2X82uGDgsJUu9dHsYfH5KDpyWbh1S28+PXqZ4cGJdIIERowFcIjfunVU/spe6gzzoc/w/RdgkLRBLWOFDWlQK1J5easdmNnTaU2IZFGgkxXjNjWmhAPE5Dx5FUhKSbVjoxVPD1Kaea+XVp8uV7N8kr35Kx2bok2aix3iYjg+zwzVgI/iRG5f0MIrzcBwK3YsElLNhQ2w2NDWMAa1oyDQKADyWZzqCq6IxUdjxa9edWV5PbRdEeXekWae+emiC6nXvAzpRpuj5LrspIvdXD1Kv9obZZFL3BzjeeTlxJP5qqlbUoDRvqVgpTcdEetOhho1oqpUukve1zE+zXVzHxU+LZRDTvjL3VCjWk4k4BSZm1Xlp7GXD9VL7TQUngU6mj+PXqfJWyqnt6e6uMezXB4umumOCwS1pPBwp6KVBtBzni9QnTu+WHFQ1UTFOeBlSSs1rvrz8X8jHMWY+mmfFcpWy3Gu+30WWbtQ3ewAa472SwSlquFd1qj/AOmUu1gFXW7Vuv4OE3Zjg6l8fFcmWW+g7OXH9FimbUcXVLQpkvapugFjcual9plRWksC6sr3XqVrZCJUUHoVY2HMxGTUqSXC7HgnGuQiMquEhaTbwq0+SmTM8wFrg8ihLsc8KFS5yUtUUp4ahKg3TqW6adPA9VHELQPS9sm+ViddBb/w0Q0NP5cQ9w8GHQ+XCu/IL6tB4gH1WGfkmR4boUVocx4LXNORBW7imeTCrKCaT0e55Dhl3ZAxV3Z0u0Cvacr/AGy2S/Z8RzcSw1cyIc3DgeYyPkdV1CfmhUdW6rTWoxvADIFc7vU0Wh7NGVPBqNSbzJq8fD7rjyt0M01O3DRu8dHafquMjBizLx1Yc55OBbW8DpSmNeFF2XY7o4mJ+68/upfPrCMXDhDb3vHL5LeWzOyUrIMuwIQDqUdEdjEd4u0HIUCvGCa0OWtiZKo8+q/4p/392uW5J2YdMGVhe1NAj3QH0NakYAngSKEjQkq3RFsea9wiIhAREQBV9q2TBmYZhRobXsOh0PFpzaeYVgiEptO6NFbX9FMw2K32MdZDeaC9QOhnOjjld+15eOxujbZIWdKhrgOviG/FcDXe0YDqGjDmanVdvRQlYvUqOdm9/mFCtd9IEZ1aUhvNeFGkqaus9Is2YVmzLxn1d38ZDP8AUj2KwSclfoebp6yroxdXIZKVZtmQ7hJbXHUlVc1GixD3nY6D6LPKyEQt7Jz1K5mpZdZHvwqUniL06Lfjr/6RniwId44NzUuZhwg04Q/gqSFIvLtM+KlTNlvDe5/nkkoq6WYtSrVck5Kh79DPKthVP8PLkuEeHDc4UphTsLBKWY7HFvxXCcl3Qzga1plVLRzaSKupUVC86Sy319fuT48g0g4O45rHBk2VIu+pUaM95B/if3KLLyzyewSii8usiKlen2sclG/l+GWceQhgjBuXNZYFnsoDdNORKq48o+o3fkubIDw2tx3kjj3f5CFdds70NPDw/wATPAs0EihIPquFo2c6mFDUFYJGee1wx9VLmbRxFWeis86kYxlg6lB3Tjr9vFfA9UWBHvysB/vQobvVgKsF1ro5mREsyTcP+i1v4Nw/+q7KuhHjSVm0UW1uzkKfgOgxMO8x47THjJw+RGoK6Lsh0RQ4T+tnS2K4E3YTa9VgcHPqAXcbuWONVtdFFiynJRy8DHDYAAAKAYADIDksiIpKBERAEREAREQBERAEREAUaclWRWGHEaHMdgWnI6qSiBNrVHQbb6MJaKD1L3wHZ4b7K82uNaeBC6BtBsbPSbCep65gxvwiTh9plKj5c1v1FlKjB8D0KP6niKbu5X8dX6v63PIMKcc13ZF6uRWeatN9OyzPmvStu7FyM5Uxpdpcf5jdyJ5ubQnzqumWr0PsofZo4H2IzA4eAe2hHmCodPZ2L0sbK0oOo4p9L/L528jS0vab8cvRfRPG8b7tNAu+R+jq0JckmUhxRxgvaf7XBrvguv2zYkySAZKZaR/2X/MCio0s38TpU5KhdV02uD4/FEKYtBl09rLgokpPgHsnJWLNmJt4IbJzJrlWE8fkrCz+jS04h/5d7RxcWMHoXV+CRpxs9ya2NrOpFtxVvD7soolotwq1wUyFaMMNpvVu5XV3iR6Foz6ddGhQh9gOiP55hoB8yu+7O9G0hKgHquueO9Go7Hkyl0eidjdEL9VlTm25J+C/o0tYWzs3M/w5QxAcKkUYOZed34ruUj0MxItDHjMgj3ITS934nUDfIFboYwAUAoOGi5rWNJJ3OCtjp1I5Ekl4Jv1t8rFPstYTJGWhy0N73tZeo59LxvuLzkABi44UVwiLQ4giIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiA+UX1EQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAf/Z"
+                    height="300px" width="300px" class="d-block" alt="">
+                </div>
+                <div class="carousel-item">
+                  <img src="https://5.imimg.com/data5/KV/DG/MY-11759486/black-kids-check-shirts-500x500.jpg" height="300px"
+                  width="300px"   class="d-block" alt="">
+                </div>
+                
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators1"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators1"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+              <div class="card" style="width: 14rem;">
+                <div class="card-body">
+                  <h5 class="card-title">A.T.U.N</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">casual stripped top wear</h6>
+                  <p class="card-text"><strong>₹1759</strong><del>₹3589</del>(51% Off)</p>
+      
+                </div>
+              </div>
+            </div>
+          </div>
+        
+    </div>
+    <div class="col-3">
+        <div class="">
+            <div id="carouselExampleIndicators8" class="carousel slide" style="width: 78%;" data-bs-ride="carousel">
+      
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="https://assetscdn1.paytm.com/images/catalog/product/K/KI/KIDMASHUP-DESIGKRAZ404077CB3BFC/1563257074378_1..jpg?imwidth=282&impolicy=hq"
+                    height="300px" width="300px" class="d-block" alt="">
+                </div>
+                
+                <div class="carousel-item">
+                  <img src="https://m.media-amazon.com/images/I/71803cchccL._UL1500_.jpg" height="300px"
+                  width="300px" class="d-block" alt="">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators8"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators8"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+              <div class="card" style="width: 14rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Ed-a-mamma</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">casual shirt</h6>
+                  <p class="card-text"><strong>₹1759</strong><del>₹3589</del>(51% Off)</p>
+      
+                </div>
+              </div>
+            </div>
+          </div>
+        
+    </div>
+    <div class="col-3">
+        <div class="">
+            <div id="carouselExampleIndicators5" class="carousel slide" style="width: 78%;" data-bs-ride="carousel">
+      
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="https://cdn.fcglcdn.com/brainbees/images/products/300x364/11608923a.webp"
+                    height="300px" width="300px" class="d-block" alt="">
+                </div>
+                <div class="carousel-item">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcn0D-VNrTbscT9nmjWlyXadPFAVGWPgi1EPbC7qD6qAUH1uYT5CuyuxHCXz2_iy65UkI&usqp=CAU" height="300px"
+                  width="300px"class="d-block" alt="">
+                </div>
+               
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators5"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators5"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+              <div class="card" style="width: 14rem;">
+                <div class="card-body">
+                  <h5 class="card-title">All about you</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Dennis jacket</h6>
+                  <p class="card-text"><strong>₹1759</strong><del>₹3589</del>(51% Off)</p>
+      
+                </div>
+              </div>
+            </div>
+          </div>
+        
+    </div>
+  </div>
+  <br><br>
+  <div class="row row2"> 
+    <div class="col-3">
+        <div class="">
+            <div id="carouselExampleIndicators4" class="carousel slide" style="width: 78%;" data-bs-ride="carousel">
+      
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="https://5.imimg.com/data5/TR/AS/TK/ANDROID-2592295/product-jpeg-500x500.jpg"
+                    height="300px"  width="300px"class="d-block" alt="">
+                </div>
+                <div class="carousel-item">
+                  <img src="https://5.imimg.com/data5/YC/YG/TG/ANDROID-2592295/product-jpeg-500x500.jpg" height="300px"
+                  width="300px" class="d-block" alt="">
+                </div>
+                
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators4"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators4"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+              <div class="card" style="width: 14rem;">
+                <div class="card-body">
+                  <h5 class="card-title">MITERA</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Half sleeve kid shirt</h6>
+                  <p class="card-text"><strong>₹1559</strong><del>₹2059</del>(30% Off)</p>
+      
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+    <div class="col-3">
+        <div class="">
+            <div id="carouselExampleIndicators6" class="carousel slide" style="width: 78%;" data-bs-ride="carousel">
+      
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRknGJ1248alcBMt5-t7wH3BqJLdyJZE2FTzQ&usqp=CAU"
+                    height="300px" width="300px" class="d-block" alt="">
+                </div>
+                <div class="carousel-item">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRinY0zIKvHQoXI8Klk76UKFppgf0piXMXB8NiVbTfAt4bLe9SlzzmVRp3mgt75DhbcJsg&usqp=CAU" height="300px"
+                  width="300px"  class="d-block" alt="">
+                </div>
+                
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators6"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators6"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+              <div class="card" style="width: 14rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Pommy</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">slim fit cotton shirt</h6>
+                  <p class="card-text"><strong>₹549</strong><del>₹1589</del>(72% Off)</p>
+      
+                </div>
+              </div>
+            </div>
+          </div>
+        
+    </div>
+    
+    <div class="col-3">
+        <div class="">
+            <div id="carouselExampleIndicators9" class="carousel slide" style="width: 78%;" data-bs-ride="carousel">
+      
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="https://rukminim1.flixcart.com/image/332/398/l0igvww0/shirt/n/6/l/7-8-years-28243-ppl-pepilio-original-imagca2hxtddjw2b.jpeg?q=50"
+                    height="300px"  width="300px"class="d-block" alt="">
+                </div>
+                
+                <div class="carousel-item">
+                  <img src="https://m.media-amazon.com/images/I/51UNLXi1L0L._AC_UL320_.jpg" height="300px"
+                  width="300px" class="d-block" alt="">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators9"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators9"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+              <div class="card" style="width: 14rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Here&Now</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">slim fit casual shirt</h6>
+                  <p class="card-text"><strong>₹459</strong><del>₹1199</del>(40% Off)</p>
+      
+                </div>
+              </div>
+            </div>
+          </div>
        
-   </div>
-   </div>
+    </div>
+    <div class="col-3">
+        <div class="">
+            <div id="carouselExampleIndicators0" class="carousel slide" style="width: 78%;" data-bs-ride="carousel">
+      
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr__NLeZJVG5gGN6yeBAi-wjAXqYoiccO7Bg&usqp=CAU"
+                    height="300px" width="300px" class="d-block" alt="">
+                </div>
+                
+                <div class="carousel-item">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAgWgycsOUNUrgByL752az5aBxH4K3mzIuhuDq98-ZAF3qPwqmItG4ZTB6u2oLgPNgpJg&usqp=CAU" height="300px"
+                 width="300px"   class="d-block" alt="">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators0"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators0"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+              <div class="card" style="width: 14rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Oscar</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Floral cotton shirt</h6>
+                  <p class="card-text"><strong>₹1169</strong><del>₹1299</del>(10% Off)</p>
+      
+                </div>
+              </div>
+            </div>
+          </div>
+       
+    </div> -->
+    </div>
+ 
+

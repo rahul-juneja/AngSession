@@ -42,6 +42,10 @@
 .s-size:hover{
     border-color: orangered;
 }
+.btn:focus{
+  color: white;
+  background-color: black;
+}
   .pricelist{
     padding-top: 10px;
     padding-left: 1px;

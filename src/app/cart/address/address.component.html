@@ -40,37 +40,52 @@
                     <button font-size="body3" font-weight="bold" role="button" type="button"
                         class="btn btn-primary newaddress" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         <div class="css-xjhrni">ADD NEW ADDRESS</div>
- 
+
 
                     </button>
                     <!-- modal -->
 
                     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Add new address</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="divider"></div><div class="contact p-3">Contact Details</div> 
-                        <div class="modal-body">
-                            <input type="text" class="inputV2-base-input  coupon_inp" placeholder="Name*"><br><br>
-                            <input type="number" class="inputV2-base-input  coupon_inp" placeholder="Mobile number*">
-                        </div>
-                        <div class="contact p-3">Address</div> 
-                        <div class="modal-body">
-                            <input type="number" class="inputV2-base-input" placeholder="Pincode*"><br><br>
-                            <input type="text" class="inputV2-base-inputaddress " placeholder="Enter your full address*">
-                            <div class="addaddress">
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Add new address</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="divider"></div>
+                                <div class="contact p-3">Contact Details</div>
+                                <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                                    <div class="modal-body">
 
-                            <button class="btn btn-primary " type="submit">
-                                Add address
-                            </button></div>
+                                        <input type="text" class="inputV2-base-input  coupon_inp" placeholder="Name*"
+                                            formControlName="name">
+                                        <span class="text-danger" *ngIf="f['name'].touched || submitted">
+                                            <label for=""
+                                                *ngIf="f['name'].errors?.['required']">*required</label></span><br><br>
+                                        <input type="number" class="inputV2-base-input  coupon_inp"
+                                            placeholder="Mobile number*" formControlName="number">
+                                        <span class="text-danger" *ngIf="f['number'].touched || submitted">
+                                            <span *ngIf="f['number'].errors?.['required']">*required</span></span>
+                                    </div>
+                                    <div class="contact p-3">Address</div>
+                                    <div class="modal-body">
+                                        <input type="number" class="inputV2-base-input" placeholder="Pincode*"><br><br>
+                                        <input type="text" class="inputV2-base-inputaddress "
+                                            placeholder="Enter your full address*">
+                                        <div class="addaddress">
+
+                                            <button class="btn btn-primary addadd " data-bs-dismiss="modal"
+                                                type="submit">
+                                                Add address
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
                 </div>
                 <div class="default">DEFAULT ADDRESS</div>
                 <div class="defaultaddress">
@@ -81,31 +96,36 @@
 
                     </div>
                     <div class="addresstext">02, Adarsh Nagar , Near Mohali Tower - Mohali <br> 765342, Mohali - Punjab
-                        <br><br> Mobile : <b>8923989496</b> </div>
-                    <div class="pay">Pay on delivery available 
+                        <br><br> Mobile : <b>8923989496</b>
+                    </div>
+                    <div class="pay">Pay on delivery available
                         <div class="buttonsadd">
                             <button font-size="body3" font-weight="bold" role="button" type="button"
                                 class="btn btn-primary addbutton" data-bs-toggle="modal" data-bs-target="#xampleModal">
                                 <div class="css-xjhrni">Remove</div>
                             </button>
                             <div class="edit">
-                            <button font-size="body3" font-weight="bold" role="button" type="button"
-                                class="btn btn-primary addbutton" data-bs-toggle="modal" data-bs-target="#xampleModal">
-                                <div class="css-xjhrni">Edit</div>
-                            </button></div>
+                                <button font-size="body3" font-weight="bold" role="button" type="button"
+                                    class="btn btn-primary addbutton" data-bs-toggle="modal"
+                                    data-bs-target="#xampleModal">
+                                    <div class="css-xjhrni">Edit</div>
+                                </button>
+                            </div>
                         </div>
                     </div>
-                    
-                    
+
+
                 </div>
-                
+
 
             </div>
             <div class="col-3 last">
                 <span class="lastpart">
-                DELIVERY ESTIMATES</span>
+                    DELIVERY ESTIMATES</span>
                 <div class="smallimg">
-                <img src="assets/img/kurta.jpg" height="55" width="40" alt=""> Estimated delivery by <b>15 Nov </b> </div>
+                    <a href="productinfo"> <img src="assets/img/kurta.jpg" height="55" width="40" alt=""></a> Estimated
+                    delivery by <b>15 Nov </b>
+                </div>
 
                 <div class="price">
                     <div class="priceBlock">PRICE DETAILS (1 Item)</div>
@@ -136,14 +156,17 @@
                         </div>
                     </div>
 
-                    <div><a href="cart/payment"><button width="100%" letterspacing="1px" font-size="body2" font-weight="bold" role="button"
-                            class="order">
-                            <div class="">PLACE ORDER</div>
-                        </button></a></div>
-
+                    <div>
+                        <a href="cart/payment">
+                            <button width="100%" letterspacing="1px" font-size="body2" font-weight="bold" role="button"
+                                class="order">
+                                <div class="">PLACE ORDER</div>
+                            </button>
+                        </a>
+                    </div>
                 </div>
             </div>
-            
+
         </div>
     </div>
 </div>

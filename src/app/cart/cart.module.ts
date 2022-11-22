@@ -5,6 +5,7 @@ import { AddressComponent } from './address/address.component';
 import { PaymentComponent } from './payment/payment.component';
 import { WishlistComponent } from '../product/wishlist/wishlist.component';
 import { CartRoutingModule } from './cart-routing.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -14,11 +15,14 @@ import { CartRoutingModule } from './cart-routing.module';
     ProductInfoComponent,
     AddressComponent,
     PaymentComponent,
-    WishlistComponent
+    WishlistComponent,
+    
+   
   ],
   imports: [
     CommonModule,
-    CartRoutingModule
+    CartRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class CartModule { }

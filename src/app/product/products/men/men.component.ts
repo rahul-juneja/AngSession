@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ProductserviceService } from '../../productservice.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { ProductserviceService } from '../../productservice.service';
 })
 export class MenComponent implements OnInit {
   product:any
-  constructor(private productServ:ProductserviceService) { }
+  constructor(private productServ:ProductserviceService, private router: Router) { }
 
   ngOnInit(): void {
     this.productServ.getProduct('men').subscribe((data:any)=>{
@@ -18,6 +19,11 @@ export class MenComponent implements OnInit {
       //   console.log(val)
       // })
     })
+  }
+  infoRed(id:any){
+    console.log(id)
+    localStorage.setItem("prodId", id)
+    this.router.navigate(['product', 'productinfo'])
   }
 
 }

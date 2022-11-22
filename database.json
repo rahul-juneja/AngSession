@@ -63,6 +63,12 @@
       "id": 1,
       "name": "Peter England",
       "description": "Slim Fit Formal Shirts",
+      "images": [
+        "https://5.imimg.com/data5/XI/XR/MY-33951838/slim-fit-formal-shirt-500x500.jpg",
+        "https://m.media-amazon.com/images/I/91Pe0u+SAyL._UY550_.jpg",
+        "https://5.imimg.com/data5/XI/XR/MY-33951838/slim-fit-formal-shirt-500x500.jpg",
+        "https://m.media-amazon.com/images/I/91Pe0u+SAyL._UY550_.jpg"
+      ],
       "image": "https://5.imimg.com/data5/XI/XR/MY-33951838/slim-fit-formal-shirt-500x500.jpg",
       "second_image": "https://m.media-amazon.com/images/I/91Pe0u+SAyL._UY550_.jpg",
       "price": 1500,
@@ -74,6 +80,12 @@
       "id": 2,
       "name": "Roadster",
       "description": "Formal pants",
+      "images": [
+        "https://m.media-amazon.com/images/I/61FjkEaXTNL._UL1500_.jpg",
+        "https://5.imimg.com/data5/DE/KR/MY-61376355/mens-cotton-formal-pant-500x500.jpg",
+        "https://m.media-amazon.com/images/I/61FjkEaXTNL._UL1500_.jpg",
+        "https://5.imimg.com/data5/DE/KR/MY-61376355/mens-cotton-formal-pant-500x500.jpg"
+      ],
       "image": "https://m.media-amazon.com/images/I/61FjkEaXTNL._UL1500_.jpg",
       "second_image": "https://5.imimg.com/data5/DE/KR/MY-61376355/mens-cotton-formal-pant-500x500.jpg",
       "price": 550,
@@ -85,6 +97,12 @@
       "id": 3,
       "name": "HRX",
       "description": "Cotton floral T-shirts",
+      "images": [
+        "https://5.imimg.com/data5/DD/EE/MY-60797658/mens-floral-shirt-500x500.jpg",
+        "https://5.imimg.com/data5/DD/EE/MY-60797658/mens-floral-shirt-500x500.jpg",
+        "https://5.imimg.com/data5/DD/EE/MY-60797658/mens-floral-shirt-500x500.jpg",
+        "https://5.imimg.com/data5/DD/EE/MY-60797658/mens-floral-shirt-500x500.jpg"
+      ],
       "image": "https://5.imimg.com/data5/DD/EE/MY-60797658/mens-floral-shirt-500x500.jpg",
       "second_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3UioNbIlpDoWzdOPhN1sbrldroMcRKcdqyHxTLpus1FLDgjHelQjeTR867jnVvyAlyKI&usqp=CAU",
       "price": 870,
@@ -93,9 +111,15 @@
       "category": "men"
     },
     {
-      "id": 4,
+      "id":4,
       "name": "Addidas",
       "description": "Track Pants",
+      "images": [
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrWph74PeAP66BgpEdHSVLPNmBmWSaI4DazOCLzmTzhvchkQpaFGVR3n-9TffJY472qdE&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrWph74PeAP66BgpEdHSVLPNmBmWSaI4DazOCLzmTzhvchkQpaFGVR3n-9TffJY472qdE&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrWph74PeAP66BgpEdHSVLPNmBmWSaI4DazOCLzmTzhvchkQpaFGVR3n-9TffJY472qdE&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrWph74PeAP66BgpEdHSVLPNmBmWSaI4DazOCLzmTzhvchkQpaFGVR3n-9TffJY472qdE&usqp=CAU"
+      ],
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrWph74PeAP66BgpEdHSVLPNmBmWSaI4DazOCLzmTzhvchkQpaFGVR3n-9TffJY472qdE&usqp=CAU",
       "second_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5NCHWerfkd79UrLwpKGSuaxITQ8fUx2vLbJG5qD7cOQcSn3BcjDdAFivkCv2TFPcP50s&usqp=CAU",
       "price": 999,
@@ -114,47 +138,7 @@
       "discount_price": 2059,
       "discount_percentage": 30,
       "id": 1
-    },
-    {
-      "name": "Dressberry",
-      "description": " Floral Frocks",
-      "image": "https://image.shutterstock.com/image-photo/elegant-woman-long-pink-summer-260nw-1793722225.jpg",
-      "second_image": "https://i.pinimg.com/736x/7f/87/13/7f8713d1f74bfe51debeedcfc2d9a82a.jpg",
-      "price": 999,
-      "discount_price": 499,
-      "discount_percentage": 50,
-      "category": "women"
-  },
-  {
-      "name": "All About You",
-      "description": " Ethnic Suits",
-      "image": "https://www.shahifits.in/wp-content/uploads/2021/07/Party-Wear-Heavy-Dupatta-Salwar-Suits-For-Women-scaled.jpg",
-      "second_image": "https://cdn.shopify.com/s/files/1/0322/7333/4316/products/4003_2.jpg?v=1614598439",
-      "price":1500,
-      "discount_price": 1299,
-      "discount_percentage": 30,
-      "category": "women"
-  },
-  {
-      "name": "VeroModa",
-      "description": " Stylish Tops",
-      "image": "https://assets.ajio.com/medias/sys_master/root/20220803/JEbE/62e9ec2eaeb26921afc0a1d3/wedani_blue_striped_ruffle-neck_top.jpg",
-      "second_image": "https://assets.ajio.com/medias/sys_master/root/20220910/OyWo/631bd1e1f997dd1f8df4fd79/-473Wx593H-464689641-pink-MODEL.jpg",
-      "price": 699,
-      "discount_price": 499,
-      "discount_percentage": 20,
-      "category": "women"
-  },
-  {
-      "name": "Sangria",
-      "description": "Net Sarees",
-      "image": "https://i.etsystatic.com/24622444/r/il/231307/2920834284/il_570xN.2920834284_tdvn.jpg",
-      "second_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSxuhB1VDq1kP926yFj7Amm5SPw0jgCsWMx7FnSnP51uiq-YCmCC6yv2B_saZjqaHfNgM&usqp=CAU",
-      "price": 1999,
-      "discount_price": 799,
-      "discount_percentage": 40,
-      "category": "women"
-  }
+    }
   ],
   "kids":[
     {
@@ -200,45 +184,8 @@
         "category": "kid"
     },
     {
-      "name": "Cutiekins",
-      "description": "Net Frocks",
-      "image": "https://4.imimg.com/data4/EC/IN/MY-31060881/kids-frocks-party-wear-500x500.jpg",
-      "second_image": "https://ae01.alicdn.com/kf/HTB1qGZvrgMPMeJjy1Xbq6AwxVXaD/Mottelee-Girls-Dress-Vintage-Beading-Frocks-Children-Wedding-Party-Dresses-Voile-Kids-Prom-Dress-Baby-Birthday.jpg",
-      "price": 2999,
-      "discount_price": 1799,
-      "discount_percentage": 80,
-      "category": "kid"
-  },
-  {
-    "name": "H&M",
-    "description": "Girls sweatshirts with joggers",
-    "image": "https://i.pinimg.com/736x/83/e6/ef/83e6ef24b3aa8ded53ff79b8cc38aabf.jpg",
-    "second_image": "https://img.ltwebstatic.com/images3_pi/2021/03/22/16163973254d459c40f5e0cadbb0500b66da6a1725.webp",
-    "price": 1999,
-    "discount_price": 859,
-    "discount_percentage": 57,
-    "category": "kid"
-},
-{
-  "name": "Marks & Spencer",
-  "description": "Checked pure cotton skirt",
-  "image": "https://i.pinimg.com/736x/92/8b/6c/928b6cdede331f5cec41bbbc419a1e0f.jpg",
-  "second_image": "https://i.pinimg.com/736x/9d/fa/49/9dfa49e90f8a9d9d8a0ca46374540b1c.jpg",
-  "price": 1299,
-  "discount_price": 519,
-  "discount_percentage": 60,
-  "category": "kid"
-},
-
-{
-  "name": "Biba",
-  "description": "Girl ready to wear lehenga choli",
-  "image": "https://www.aishwaryadesignstudio.com/content/images/thumbs/0077341_classy-peach-grey-designer-kids-wear-lehenga-choli-set.jpeg",
-  "second_image": "https://5.imimg.com/data5/SELLER/Default/2020/8/ZJ/WD/HY/3675663/kids-net-lehenga-choli-500x500.jpg",
-  "price": 3999,
-  "discount_price": 1439,
-  "discount_percentage": 64,
-  "category": "kid"
-}
-      ]
+      "boys": [],
+      "girls": []
     }
+  ]
+}

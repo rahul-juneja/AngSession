@@ -16,4 +16,8 @@ export class ApiService {
   getMothode(){
     return this.http.get(this.url)
   }
+
+
+
+  
 }
