@@ -6,18 +6,10 @@ import { map } from 'rxjs';
   providedIn: 'root'
 })
 export class ApiService {
-  url = "http://localhost:3000/users"
+  url = "http://localhost:5000/api/login"
 
   constructor(private http:HttpClient) { }
-  postMethod(data:any){
+  login(data:any){
     return this.http.post(this.url,data)
   }
-  
-  getMothode(){
-    return this.http.get(this.url)
-  }
-
-
-
-  
 }

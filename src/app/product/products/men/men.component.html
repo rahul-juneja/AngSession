@@ -4,7 +4,7 @@
       <div [id]="'carouselExampleIndicators'+item.id" class="carousel slide" style="width: 78%;" data-bs-ride="carousel">
 
         <div class="carousel-inner">
-          <div class="carousel-item active" *ngFor="let img of item.images" (click)="infoRed(item.id)">
+          <div class="carousel-item active" *ngFor="let img of item.images" (click)="infoRed(item._id)">
             <img
               [src]="img"
               height="300px" width="300px"class="d-block " alt="">

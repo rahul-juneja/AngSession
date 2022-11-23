@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ProductserviceService } from '../../productservice.service';
+import { ProductService } from '../../product.service';
 
 @Component({
   selector: 'app-men',
@@ -9,12 +9,12 @@ import { ProductserviceService } from '../../productservice.service';
 })
 export class MenComponent implements OnInit {
   product:any
-  constructor(private productServ:ProductserviceService, private router: Router) { }
+  constructor(private productServ:ProductService, private router: Router) { }
 
   ngOnInit(): void {
     this.productServ.getProduct('men').subscribe((data:any)=>{
       console.log(data)
-      this.product = data
+      this.product = data.products
       // data.map((val:any)=>{
       //   console.log(val)
       // })

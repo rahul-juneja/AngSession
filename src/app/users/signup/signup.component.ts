@@ -49,11 +49,11 @@ export class SignupComponent implements OnInit {
         password: this.f['password'].value,
         repassword: this.f['repassword'].value
       }
-      this.api.postMethod(this.data).subscribe(res => {
-        // alert("Account Created!!!");
-        console.log(this.data);
-        this.router.navigateByUrl("/user/login");
-      })
+      // this.api.postMethod(this.data).subscribe(res => {
+      //   // alert("Account Created!!!");
+      //   console.log(this.data);
+      //   this.router.navigateByUrl("/user/login");
+      // })
     }
   }
   login(){
