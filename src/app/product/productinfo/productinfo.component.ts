@@ -13,6 +13,7 @@ import { ProductService } from '../product.service';
 export class ProductInfoComponent implements OnInit {
 
   data: any = [];
+  size:any;
   prodId = localStorage.getItem('prodId')
 
   constructor(private formBuilder: FormBuilder, private productServ: ProductService, private cartServ: CartService,
@@ -25,13 +26,16 @@ export class ProductInfoComponent implements OnInit {
       console.log(this.data)
     })
   }
-
+  sizeClick(val:String){
+    console.log(val)
+    this.size = val
+  }
   addToCart(product: any) {
     debugger
     this.data = {
       userId: localStorage.getItem('userId'),
       productId: localStorage.getItem('prodId'),
-      size: 's'
+      size: this.size
     }
     this.cartServ.addtoCart("add",this.data).subscribe(res=>{
       console.log(res)

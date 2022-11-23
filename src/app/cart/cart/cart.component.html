@@ -185,13 +185,10 @@
                                     By :
                                     Flashtech Retail <br></span>
                                     <form [formGroup]="cartForm">
-                                    <span>Size: <select id="cars" name="cars">
-                                        <option [value]="size">{{size}}</option>
-                                        <option value="s">S</option>
-                                        <option value="m">M</option>
-                                        <option value="l">L</option>
-                                        <option value="xl">XL</option>
-                                    </select></span>&nbsp;<span>Qty: <select id="cars" name="cars" formControlName="qty">
+                                    <span>
+                                        Size:
+                                        <span>{{item.size}}</span>
+                                    </span>&nbsp;<span>Qty: <select id="cars" name="cars" formControlName="qty">
                                         <option value="1">1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
