@@ -26,11 +26,12 @@ export class CartComponent implements OnInit {
       data.result.map((val:any)=>{
         // console.log(val)
         this.allInfo = val
-        this.size = val.size
+        // this.size = val.size
         // console.log(this.allInfo.size)
         this.f['size'].setValue(this.allInfo.size)
         // console.log(val.product_details)
-        val.product_details[0].size = this.size.toUpperCase()
+        val.product_details[0].size = val.size.toUpperCase()
+        val.product_details[0].qty = val.quantity
         this.data.push(val.product_details[0])
         console.log(this.data)
       })
