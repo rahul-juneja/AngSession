@@ -176,15 +176,17 @@
                     </div>
                 </div>
                 <div class="cart-1" *ngFor="let item of data">
-                    <div class="cart-2">
-                        <div class="item"><a href="productinfo" (click)="headerShow()"> 
-                            <img [src]="item.image" alt="Click to More" height="150" width="100" class="kurta"></a>
 
-                            <span class="anoyek">{{item.name}}<br> {{item.description}} <br> 
+                    <div class="cart-2 d-flex ">
+                        <div class="item"><a (click)="productInfo(item)">
+                                <img [src]="item.image" alt="Click to More" height="150" width="100" class="kurta"></a>
+
+                            <span class="anoyek">{{item.name}}<br> {{item.description}} <br>
                                 <span class="sold"> Sold
                                     By :
-                                    Flashtech Retail <br></span>
-                                    <form [formGroup]="cartForm">
+                                    Flashtech Retail <br>
+                                </span>
+                                <form [formGroup]="cartForm">
                                     <span>
                                         Size:
                                         <span>{{item.size}}</span>
@@ -194,6 +196,8 @@
                                         <span>{{item.qty}}</span> 
                                     </span>
                                 </form>
+
+
                                 <br>
                                 <span class="rupee"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="10"
                                         viewBox="0 0 8 10" class="itemComponents-base-rupeeIcon">
@@ -201,8 +205,8 @@
                                             d="M5.841 9.44l-1.21.513L.365 5.968l.547-.875c.251-.005.529-.033.834-.086a4.91 4.91 0 0 0 .896-.242c.292-.11.556-.251.793-.424s.412-.383.526-.63H.564V2.578h3.431a1.779 1.779 0 0 0-.307-.51 1.99 1.99 0 0 0-.52-.426 2.789 2.789 0 0 0-.738-.29 3.955 3.955 0 0 0-.957-.107h-.91V0h6.31v1.244H4.522c.082.082.162.179.239.29a3.867 3.867 0 0 1 .39.712c.05.12.086.23.109.331h1.613v1.135H5.246a2.51 2.51 0 0 1-.434.906 3.293 3.293 0 0 1-.718.694 3.884 3.884 0 0 1-.916.478 5.378 5.378 0 0 1-1.028.267L5.84 9.44z">
                                         </path>
                                     </svg>
-                                    <span>: {{item.price}}</span> <span class="item-2"><svg xmlns="http://www.w3.org/2000/svg"
-                                            width="9" height="10" viewBox="0 0 9 10"
+                                    <span>: {{item.price}}</span> <span class="item-2"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="9" height="10" viewBox="0 0 9 10"
                                             class="itemComponents-base-rupeeIcon ">
                                             <g fill-rule="nonzero">
                                                 <path
@@ -214,9 +218,37 @@
                                 </span><br>
                                 <span class="combo">Combo Discount Offer</span>
                             </span>
+                            <button data-bs-toggle="modal" data-bs-target="#eModal"  class="btn btn-primary sss" (click)="deleteProduct(item._id,item.size)">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-trash svgg" viewBox="0 0 16 16">
+                                    <path
+                                        d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                                    <path fill-rule="evenodd"
+                                        d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                                </svg></button>
                         </div>
+
+                        <!-- modal -->
+
+                        <div id="eModal" class="modal" tabindex="-1">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body removing">
+                                  <p>Are you sure want to remove this product ?</p>
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                  <button type="button" class="btn btn-danger">Remove</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
                     </div>
-                    <button type="button" data-bs-target="close" class="btn-close" aria-label="Close"></button>
+
                 </div>
             </div>
         </div>

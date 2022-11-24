@@ -31,7 +31,6 @@ export class ProductInfoComponent implements OnInit {
     this.size = val
   }
   addToCart(product: any) {
-    debugger
     this.data = {
       userId: localStorage.getItem('userId'),
       productId: localStorage.getItem('prodId'),

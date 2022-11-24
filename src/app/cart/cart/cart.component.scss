@@ -216,6 +216,33 @@
 .cart-1{
   background-color: rgb(253, 255, 255);
 }
+.cartinfo{
+  background-color: white;
+}
+.svgg{
+//   float: right;
+  color:red;
+//   justify-content: right;
+  width: 60px;
+  height: 30px;
+  // position: relative;
+  // left: 150px;
+  // bottom: 50px;
+}
+.sss{
+  position: relative;
+  left: 150px;
+    background:transparent;
+    height: 50px;
+    width: 90px;
+    border: transparent;
+
+}
+.removing{
+  border: 0;
+  border-style: none;
+  color: black;
+}
 .cartwhole{
   display: inline-block;
     width: 94%;

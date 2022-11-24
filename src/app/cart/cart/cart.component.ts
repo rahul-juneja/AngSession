@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
+import { Router } from '@angular/router';
 import { CartService } from '../cart.service';
 
 @Component({
@@ -13,7 +14,7 @@ export class CartComponent implements OnInit {
   cartForm!:FormGroup
   data:any = []
   size: any;
-  constructor(private formBuilder: FormBuilder,private cartServ: CartService) { }
+  constructor(private formBuilder: FormBuilder,private cartServ: CartService, private router: Router) { }
 
   ngOnInit(): void {
     this.cartForm = this.formBuilder.group({
@@ -43,6 +44,23 @@ export class CartComponent implements OnInit {
   headerShow(){
     localStorage.setItem('isCart', 'false')
   }
-   
-
+  productInfo(data:any){
+    console.log(data)
+    localStorage.setItem('prodId', data._id)
+    localStorage.setItem('isCart', 'false')
+    this.router.navigate(['product',"productinfo"])
+  }
+  deleteProduct(prodID:any,size:any){
+    console.log(prodID, size)
+    const userId=localStorage.getItem("userId")
+    console.log(userId)
+    const data = {
+      userId: userId,
+      productId: prodID,
+      size: size.toLowerCase()
+    }
+    this.cartServ.delProduct("delete",data).subscribe((res: any)=>{
+      console.log(res)
+    })
+  }
 }
