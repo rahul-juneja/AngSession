@@ -22,7 +22,7 @@ export class MenComponent implements OnInit {
   }
   infoRed(id:any){
     console.log(id)
-    localStorage.setItem("prodId", id)
+    localStorage.setItem("prodId","men/"+id)
     this.router.navigate(['product', 'productinfo'])
   }
 

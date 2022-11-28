@@ -7,9 +7,13 @@ import { map } from 'rxjs';
 })
 export class ApiService {
   url = "http://localhost:5000/api/login"
-
+  loginStats = Boolean(localStorage.getItem('userId')) || false
+  
   constructor(private http:HttpClient) { }
   login(data:any){
     return this.http.post(this.url,data)
+  }
+  isAuthenticated(){
+    return this.loginStats
   }
 }

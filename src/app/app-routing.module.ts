@@ -16,20 +16,23 @@ import { KidgirlComponent } from './product/products/kidgirl/kidgirl.component';
 import { SettingsComponent } from './users/settings/settings.component';
 import { LoginComponent } from './users/login/login.component';
 import { SignupComponent } from './users/signup/signup.component';
+import { AuthGuard } from './users/auth.guard';
 
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: MainComponent },
+  { path: 'home', component: MainComponent, canActivate:[AuthGuard] },
   { 
     path: 'cart', 
     loadChildren: ()=> import('./cart/cart.module')
-    .then(m=>m.CartModule)
+    .then(m=>m.CartModule), 
+    canActivate:[AuthGuard]
   },
   { 
     path: 'product', 
     loadChildren: ()=> import('./product/product.module')
-    .then(m=>m.ProductModule)
+    .then(m=>m.ProductModule), 
+    canActivate:[AuthGuard]
   },
   { 
     path: 'user', 

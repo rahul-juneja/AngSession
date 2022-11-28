@@ -15,13 +15,14 @@ export class ProductInfoComponent implements OnInit {
   data: any = [];
   size:any;
   prodId = localStorage.getItem('prodId')
+  productInfo = false
 
   constructor(private formBuilder: FormBuilder, private productServ: ProductService, private cartServ: CartService,
       private router: Router
     ) { }
 
   ngOnInit(): void {
-    this.productServ.getProduct("men/" + this.prodId).subscribe((data: any) => {
+    this.productServ.getProduct(this.prodId).subscribe((data: any) => {
       this.data = data.products[0]
       console.log(this.data)
     })
@@ -29,6 +30,7 @@ export class ProductInfoComponent implements OnInit {
   sizeClick(val:String){
     console.log(val)
     this.size = val
+    this.productInfo = true
   }
   addToCart(product: any) {
     this.data = {
@@ -36,12 +38,17 @@ export class ProductInfoComponent implements OnInit {
       productId: localStorage.getItem('prodId'),
       size: this.size
     }
-    this.cartServ.addtoCart("add",this.data).subscribe(res=>{
-      console.log(res)
-      localStorage.setItem('isCart', "true")
-      this.router.navigateByUrl('cart')
-    })
-    console.log(product)
+    if(this.productInfo){
+      this.cartServ.addtoCart("add",this.data).subscribe(res=>{
+        console.log(res)
+        localStorage.setItem('isCart', "true")
+        this.router.navigateByUrl('cart')
+      })
+      console.log(product)
+    }
+    else{
+      alert("Invalid Size...!")
+    }
 
   }
 }

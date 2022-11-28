@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ProductService } from '../../product.service';
 
 @Component({
@@ -8,15 +9,19 @@ import { ProductService } from '../../product.service';
 })
 export class KidboysComponent implements OnInit {
 product:any
-  constructor(private productserv:ProductService) { }
+  constructor(private productserv:ProductService, private router: Router) { }
 
   ngOnInit(): void {
     this.productserv.getProduct('kids').subscribe((data:any)=>{
       console.log(data)
-      this.product = data
+      this.product = data.products
     })
-
-    }
+  }
+  infoRed(id:any){
+    console.log(id)
+    localStorage.setItem("prodId","kids/"+id)
+    this.router.navigate(['product', 'productinfo'])
+  }
   }
 
 
