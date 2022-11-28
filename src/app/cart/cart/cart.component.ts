@@ -14,6 +14,7 @@ export class CartComponent implements OnInit {
   cartForm!:FormGroup
   data:any = []
   size: any;
+  grandTotal:number = 0
   constructor(private formBuilder: FormBuilder,private cartServ: CartService, private router: Router) { }
 
   ngOnInit(): void {
@@ -34,9 +35,12 @@ export class CartComponent implements OnInit {
         val.product_details[0].size = val.size.toUpperCase()
         val.product_details[0].qty = val.quantity
         this.data.push(val.product_details[0])
-        console.log(this.data)
+        this.grandTotal += val.product_details[0].price * val.product_details[0].qty
+        console.log(this.grandTotal)
+        // console.log(this.data)
       })
     })
+
   }
   get f(){
     return this.cartForm.controls
@@ -61,6 +65,10 @@ export class CartComponent implements OnInit {
     }
     this.cartServ.delProduct("delete",data).subscribe((res: any)=>{
       console.log(res)
+      localStorage.setItem('isCart', "true")
+      window.location.reload()
+      this.router.navigateByUrl('/cart')
     })
+    
   }
 }

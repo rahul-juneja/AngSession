@@ -53,7 +53,7 @@
                 </div>
                     <div class="allsizes">
                         <div class="d-flex justify-content-evenly row sizes">
-                            <button class="btn btn-outline-dark col-3 " value="XS" (click)="sizeClick('xs')">
+                            <button class="btn btn-outline-dark col-3 " value="XS"  (click)="sizeClick('xs')">
                                 XS
                             </button>
                             <button class="btn btn-outline-dark col-3" value="S" (click)="sizeClick('s')">
@@ -72,8 +72,9 @@
                         </div>
                     </div>
                 
-                <div class="addtocart"><button width="100%" (click)="addToCart(data)" letterspacing="1px" font-size="body2" font-weight="bold"
-                        class="order">
+                <div class="addtocart">
+                    <button width="100%" (click)="addToCart(data)"  letterspacing="1px" font-size="body2" font-weight="bold"
+                        role="button" class="order">
                         <div> <span class="bag"> Add to Bag&nbsp;</span><svg xmlns="http://www.w3.org/2000/svg"
                                 width="16" height="16" fill="currentColor" class="bi bi-handbag" viewBox="0 0 16 16">
                                 <path
@@ -91,6 +92,24 @@
                     </div>
 
                 </div>
+
+                <!-- toast -->
+
+
+                <!-- <hr *ngIf="show" />
+                <ngb-toast
+                    *ngIf="show"
+                    header="Autohide can be cancelled"
+                    [delay]="5000"
+                    [autohide]="autohide"
+                    (mouseenter)="autohide = false"
+                    (mouseleave)="autohide = true"
+                    (hide)="show = false; autohide = true"
+                    [class.bg-warning]="!autohide">
+                
+                    <div *ngIf="autohide">Try to mouse hover me.</div>
+                    <div *ngIf="!autohide">I will remain visible until you leave again.</div>
+                </ngb-toast> -->
 
 
             </div>

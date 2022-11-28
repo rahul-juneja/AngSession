@@ -5,6 +5,7 @@ import { CartService } from 'src/app/cart/cart.service';
 import { ApiService } from 'src/app/users/api.service';
 import { ProductService } from '../product.service';
 
+
 @Component({
   selector: 'app-productinfo',
   templateUrl: './productinfo.component.html',
@@ -14,6 +15,7 @@ export class ProductInfoComponent implements OnInit {
 
   data: any = [];
   size:any;
+  isSize:boolean = false;
   prodId = localStorage.getItem('prodId')
   productInfo = false
 
@@ -22,12 +24,13 @@ export class ProductInfoComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-    this.productServ.getProduct(this.prodId).subscribe((data: any) => {
+    this.productServ.getProduct("product/"+this.prodId).subscribe((data: any) => {
       this.data = data.products[0]
       console.log(this.data)
     })
   }
   sizeClick(val:String){
+    this.isSize = true
     console.log(val)
     this.size = val
     this.productInfo = true
@@ -47,7 +50,8 @@ export class ProductInfoComponent implements OnInit {
       console.log(product)
     }
     else{
-      alert("Invalid Size...!")
+      alert("Invalid Size..!")
+      window.location.reload()
     }
 
   }

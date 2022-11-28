@@ -13,6 +13,7 @@ export class AddressComponent implements OnInit {
   user: any;
   islogged: boolean = false;
   update: any;
+  data:any
   constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {

@@ -15,7 +15,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     ProductInfoComponent,
     AddressComponent,
     PaymentComponent,
-    WishlistComponent   
+    WishlistComponent,
   ],
   imports: [
     CommonModule,
