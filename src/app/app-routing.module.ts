@@ -8,7 +8,6 @@ import { MainComponent } from './webpage/main/main.component';
 import { ProductInfoComponent } from './product/productinfo/productinfo.component';
 
 import { AddressComponent } from './cart/address/address.component';
-import { PaymentComponent } from './cart/payment/payment.component';
 import { WishlistComponent } from './product/wishlist/wishlist.component';
 import { WomenComponent } from './product/products/women/women.component';
 import { KidboysComponent } from './product/products/kidboys/kidboys.component';
