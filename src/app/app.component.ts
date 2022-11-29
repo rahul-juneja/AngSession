@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +8,12 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'AngSession';
-  constructor(private route: Router){
-    console.log(this.route.url)
+  constructor(private route: Router, private acti:ActivatedRoute){
+    this.route.config.map((url)=>{
+      console.log(url.path)
+    })
+    acti.url.subscribe(url=>console.log(url))
+  }
+  ngOnit(){
   }
 }

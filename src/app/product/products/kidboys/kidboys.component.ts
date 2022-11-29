@@ -12,6 +12,7 @@ product:any
   constructor(private productserv:ProductService, private router: Router) { }
 
   ngOnInit(): void {
+    localStorage.setItem('isCart', 'false')
     this.productserv.getProduct('category/kids').subscribe((data:any)=>{
       console.log(data)
       this.product = data.products

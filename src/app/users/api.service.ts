@@ -11,7 +11,8 @@ export class ApiService {
   loginStats = Boolean(localStorage.getItem('userId')) || false
   
   constructor(private http:HttpClient) {
-    console.log(this.cartStats)
+    console.log(this.cartStats.value.cart)
+    // this.cartStats.next({cart:false})
 
   }
   login(data:any){

@@ -12,6 +12,7 @@ export class WomenComponent implements OnInit {
   constructor(private productServ:ProductService, private router: Router) { }
 
   ngOnInit(): void {
+    localStorage.setItem('isCart', 'false')
     this.productServ.getProduct('category/women').subscribe((data:any)=>{
       console.log(data)
       this.product = data.products

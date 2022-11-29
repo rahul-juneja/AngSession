@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { urlencoded } from 'express';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { CartService } from '../cart.service';
 
 @Component({
@@ -13,12 +15,27 @@ export class CartComponent implements OnInit {
   allInfo:any
   cartForm!:FormGroup
   data:any = []
+  dataChange = new BehaviorSubject([])
   size: any;
   delData:any = []
   grandTotal:number = 0
-  constructor(private formBuilder: FormBuilder,private cartServ: CartService, private router: Router) { }
+  path:any
+  
+  constructor(private formBuilder: FormBuilder,private cartServ: CartService, private router: Router,
+      private activatedRoute: ActivatedRoute    
+    ) { }
 
   ngOnInit(): void {
+    this.cartServ.cartHeader().next({cart:true})
+    console.log(this.cartServ.cartHeader())
+
+    localStorage.setItem('isCart', 'true')
+    this.activatedRoute.url.subscribe((url)=>{
+      this.path = url
+    })
+    console.log(this.router)
+    console.log(this.path[0].path)
+
     this.cartForm = this.formBuilder.group({
       size: ['', [Validators.required]],
       qty: ['', [Validators.required]],
@@ -27,21 +44,17 @@ export class CartComponent implements OnInit {
     console.log(typeof this.userId)
     this.cartServ.showCart(this.userId).subscribe((data:any)=>{
       data.result.map((val:any)=>{
-        // console.log(val)
         this.allInfo = val
-        // this.size = val.size
-        // console.log(this.allInfo.size)
         this.f['size'].setValue(this.allInfo.size)
-        // console.log(val.product_details)
         val.product_details[0].size = val.size.toUpperCase()
         val.product_details[0].qty = val.quantity
         this.data.push(val.product_details[0])
+        this.dataChange.next(this.data)
         this.grandTotal += val.product_details[0].price * val.product_details[0].qty
         console.log(this.grandTotal)
-        // console.log(this.data)
       })
     })
-
+    console.log(this.dataChange.value)
   }
   get f(){
     return this.cartForm.controls
@@ -56,7 +69,6 @@ export class CartComponent implements OnInit {
     this.router.navigate(['product',"productinfo"])
   }
   deleteProduct(prodID:any,size:any){
-    debugger
     console.log(prodID, size)
     const userId=localStorage.getItem("userId")
     console.log(userId)
@@ -65,14 +77,22 @@ export class CartComponent implements OnInit {
       productId: prodID,
       size: size.toLowerCase()
     }
-    console.log(this.delData)
   }
   confirm(data=this.delData){
     this.cartServ.delProduct("delete",data).subscribe((res: any)=>{
       console.log(res)
-      localStorage.setItem('isCart', "true")
-      window.location.reload()
-      this.router.navigateByUrl('/cart')
+      this.dataChange.asObservable().subscribe((val)=>{
+        val.map((item)=>{
+          if (item['_id'] == data.productId){
+            this.data.pop(item)
+            this.dataChange.next(this.data)
+            console.log(this.data)
+          }
+          console.log(item)
+        })
+      })
+      console.log(this.data)
+      console.log(this.delData)
     })
   }
 

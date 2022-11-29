@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Route, Router } from '@angular/router';
+import { ActivatedRoute, Route, Router } from '@angular/router';
+import { CartService } from 'src/app/cart/cart.service';
 
 @Component({
   selector: 'app-main',
@@ -9,12 +10,13 @@ import { Route, Router } from '@angular/router';
 export class MainComponent implements OnInit {
   isLogin = false
 
-  constructor(private route: Router) {
-    localStorage.setItem('isCart', 'false')
-   }
-
+  constructor(private route: Router, private cartServ: CartService) {
+  }
+  
   ngOnInit(): void {
-    
+    localStorage.setItem('isCart', 'false')
+    this.cartServ.cartHeader().next({cart:false})
+    console.log(this.cartServ.cartHeader().value)
   }
 
 }

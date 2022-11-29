@@ -24,6 +24,7 @@ export class ProductInfoComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
+    this.cartServ.cartHeader().next({cart:false})
     this.productServ.getProduct("product/"+this.prodId).subscribe((data: any) => {
       this.data = data.products[0]
       console.log(this.data)
@@ -45,7 +46,7 @@ export class ProductInfoComponent implements OnInit {
       this.cartServ.addtoCart("add",this.data).subscribe(res=>{
         console.log(res)
         localStorage.setItem('isCart', "true")
-        this.router.navigateByUrl('cart')
+        this.router.navigateByUrl('cart/cartinfo')
       })
       console.log(product)
     }

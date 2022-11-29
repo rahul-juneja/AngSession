@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CartService } from 'src/app/cart/cart.service';
 
 @Component({
   selector: 'app-header',
@@ -7,14 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   email = localStorage.getItem('email')
-  isCart = (localStorage.getItem('isCart') == 'true' ? true : false)
-  constructor() {
+  isCart:any
+  constructor(private cartServ: CartService) {
 
   }
   ngOnChange(){
   }
   ngOnInit(): void {
-    
+    this.cartServ.cartHeader().subscribe((val)=>{
+      this.isCart = val.cart
+      console.log("Updated " + this.isCart)
+      return this.isCart
+    })
     
   }
   cartShow() {

@@ -8,7 +8,7 @@ import { PaymentinfoComponent } from './paymentinfo/paymentinfo.component';
 
 
 const routes: Routes = [
-  { path: '', component: CartComponent },
+  { path: 'cartinfo', component: CartComponent },
   { path: 'address', component: AddressComponent },
   { path: 'paymentinfo', component:PaymentinfoComponent}
 ];

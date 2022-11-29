@@ -24,6 +24,8 @@ export class AddressComponent implements OnInit {
   constructor(private formBuilder: FormBuilder,private cartServ: CartService, private router: Router) { }
 
   ngOnInit(): void {
+    this.cartServ.cartHeader().next({cart:true})
+    localStorage.setItem('isCart', 'true')
     this.registerForm = this.formBuilder.group({
       
       name: ['', [Validators.required, Validators.pattern('^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$')]],
