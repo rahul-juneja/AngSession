@@ -14,6 +14,7 @@ export class CartComponent implements OnInit {
   cartForm!:FormGroup
   data:any = []
   size: any;
+  delData:any = []
   grandTotal:number = 0
   constructor(private formBuilder: FormBuilder,private cartServ: CartService, private router: Router) { }
 
@@ -55,20 +56,24 @@ export class CartComponent implements OnInit {
     this.router.navigate(['product',"productinfo"])
   }
   deleteProduct(prodID:any,size:any){
+    debugger
     console.log(prodID, size)
     const userId=localStorage.getItem("userId")
     console.log(userId)
-    const data = {
+    this.delData = {
       userId: userId,
       productId: prodID,
       size: size.toLowerCase()
     }
+    console.log(this.delData)
+  }
+  confirm(data=this.delData){
     this.cartServ.delProduct("delete",data).subscribe((res: any)=>{
       console.log(res)
       localStorage.setItem('isCart', "true")
       window.location.reload()
       this.router.navigateByUrl('/cart')
     })
-    
   }
+
 }
