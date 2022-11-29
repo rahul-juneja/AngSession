@@ -46,7 +46,7 @@ export class CartComponent implements OnInit {
       data.result.map((val:any)=>{
         this.allInfo = val
         this.f['size'].setValue(this.allInfo.size)
-        val.product_details[0].size = val.size.toUpperCase()
+        val.product_details[0].size = val.size
         val.product_details[0].qty = val.quantity
         this.data.push(val.product_details[0])
         this.dataChange.next(this.data)
@@ -81,17 +81,20 @@ export class CartComponent implements OnInit {
   confirm(data=this.delData){
     this.cartServ.delProduct("delete",data).subscribe((res: any)=>{
       console.log(res)
-      this.dataChange.asObservable().subscribe((val)=>{
-        val.map((item)=>{
-          if (item['_id'] == data.productId){
-            this.data.pop(item)
-            this.dataChange.next(this.data)
-            console.log(this.data)
-          }
-          console.log(item)
-        })
-      })
-      console.log(this.data)
+      let newData:any = []
+      this.dataChange.asObservable().subscribe((val:any)=>{
+        val.map((item:any)=>{
+        console.log(item)
+        if (item["_id"] == data.productId && item['size'] == data.size){
+          console.log(">>>>>>>>>here")
+        }else{
+          newData.push(item)
+        }
+
+        console.log(newData)
+        this.data = newData
+      })})
+      // console.log(this.data)
       console.log(this.delData)
     })
   }
