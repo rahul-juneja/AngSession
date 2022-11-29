@@ -1,0 +1,64 @@
+.firstpart{
+    padding-top: 20px;
+    padding-bottom: 15px;
+    border-bottom: solid 1px rgb(235, 225, 225);
+  }
+  
+  .nav{  
+      text-align: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 500 ;
+      padding-right:50px;
+  }
+  .right{
+    float: right;
+    position: relative;
+    display: flex;
+    right: -290px;
+  }
+  .secure{
+    padding-left: 4px;
+    font-weight: 400;
+    font-size: 15px;
+    padding-top: 10px;
+  }
+  .myn{
+      float: left;
+  }
+  .textselect{
+    margin-top: 10px;
+  }
+  .select{
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 20px;
+    padding-bottom: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  .methods{
+    border: 1px solid rgb(218, 193, 193);
+  }
+//   .cards{
+//     height: 50px;
+//     width: 50px;
+//   }
+.fsvg{
+    margin: 30px 80px 40px;
+    color: black;
+     --bs-link-color: #000000;
+}
+.ssvg{
+    position: relative;
+    top: -13px;
+}
+.card-body{
+       
+       
+    background-color:white;
+   
+}
+.addcard{
+    text-align: center;
+}
+

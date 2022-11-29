@@ -6,6 +6,7 @@ import { PaymentComponent } from './payment/payment.component';
 import { WishlistComponent } from '../product/wishlist/wishlist.component';
 import { CartRoutingModule } from './cart-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { PaymentinfoComponent } from './paymentinfo/paymentinfo.component';
 
 
 
@@ -16,6 +17,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     AddressComponent,
     PaymentComponent,
     WishlistComponent,
+    PaymentinfoComponent,
   ],
   imports: [
     CommonModule,
